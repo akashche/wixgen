@@ -1,0 +1,25 @@
+<jxb:bindings version="2.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <jxb:bindings schemaLocation="wix.xsd">
+        <jxb:schemaBindings>
+            <jxb:package name="com.redhat.akashche.wixgen.jaxb"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <!--<jxb:bindings schemaLocation="wix.xsd" node="/xsd:schema">-->
+        <!--<jxb:bindings node="//xsd:element[@name='style']">-->
+            <!--<jxb:bindings node=".//xsd:attribute[@name='pen']">-->
+                <!--<jxb:property name="stylePen"/>-->
+            <!--</jxb:bindings>-->
+        <!--</jxb:bindings>-->
+        <!--<jxb:bindings node="//xsd:element[@name='graphicElement']">-->
+            <!--<jxb:bindings node=".//xsd:attribute[@name='pen']">-->
+                <!--<jxb:property name="graphicElementPen"/>-->
+            <!--</jxb:bindings>-->
+        <!--</jxb:bindings>-->
+        <!--<jxb:bindings node="//xsd:element[@name='columnGroup']">-->
+            <!--<jxb:class name="CrossTabColumnGroup">-->
+            <!--</jxb:class>-->
+        <!--</jxb:bindings>-->
+    <!--</jxb:bindings>-->
+</jxb:bindings>

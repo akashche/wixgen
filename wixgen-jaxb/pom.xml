@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.redhat.akashche</groupId>
+        <artifactId>wixgen-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>wixgen-jaxb</artifactId>
+    <name>Wix Toolset Scenarios Generator JAXB Classes</name>
+
+    <dependencies>
+        <!-- common utilities -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${version.commons_lang}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${version.commons_io}</version>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- https://cxf.apache.org/cxf-xjc-plugin.html -->
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-xjc-plugin</artifactId>
+                <version>${version.cxf}</version>
+                <executions>
+                    <execution>
+                        <id>jrxml</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>xsdtojava</goal>
+                        </goals>
+                        <configuration>
+                            <xsdOptions>
+                                <xsdOption>
+                                    <extension>true</extension>
+                                    <xsd>${project.basedir}/src/main/resources/com/redhat/akashche/wixgen/jaxb/wix.xsd</xsd>
+                                    <bindingFile>
+                                        ${project.basedir}/src/main/resources/com/redhat/akashche/wixgen/jaxb/wix.xjb</bindingFile>
+                                    <extensionArgs>
+                                        <arg>-Xcommons-lang</arg>
+                                        <arg>-Xvalue-constructor</arg>
+                                        <arg>-Xdefault-value</arg>
+                                        <arg>-Xfluent-api</arg>
+                                        <arg>-no-header</arg>
+                                    </extensionArgs>
+                                </xsdOption>
+                            </xsdOptions>
+                            <extensions>
+                                <extension>org.jvnet.jaxb2_commons:jaxb2-commons-lang:2.3</extension>
+                                <extension>org.jvnet.jaxb2_commons:jaxb2-value-constructor:3.0</extension>
+                                <extension>org.jvnet.jaxb2_commons:jaxb2-default-value:1.1</extension>
+                                <extension>org.jvnet.jaxb2_commons:jaxb2-fluent-api:3.0</extension>
+                            </extensions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
