@@ -42,7 +42,7 @@
                 <version>${version.cxf}</version>
                 <executions>
                     <execution>
-                        <id>jrxml</id>
+                        <id>wix</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xsdtojava</goal>
