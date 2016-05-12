@@ -14,35 +14,30 @@ import java.util.*;
  */
 public class DirectoryGenerator {
 
-    Wix createFromDir(File dir) throws IOException {
+    Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
         Collection<Object> contents = createContents(dir, comprefs);
+        Collection<Object> icon = createIcon(conf);
         return new Wix()
                 .withProduct(new Product()
-                        .withName("Test Name")
-                        .withManufacturer("Test Vendor")
+                        .withName(conf.getAppName())
+                        .withManufacturer(conf.getVendor())
                         .withId(UUID.randomUUID().toString())
                         .withUpgradeCode(UUID.randomUUID().toString())
-                        .withLanguage("1033")
-                        .withCodepage("1252")
-                        .withVersion("1.0")
+                        .withLanguage(conf.getLanguage())
+                        .withCodepage(conf.getCodepage())
+                        .withVersion(conf.getVersion())
                         .withPackage(new Package()
-                                .withKeywords("Test Keywords")
-                                .withDescription("Test Description")
-                                .withComments("Test Comments")
                                 .withInstallerVersion(new BigInteger("200"))
-                                .withLanguages("1033")
+                                .withLanguages(conf.getLanguage())
                                 .withCompressed("yes")
-                                .withSummaryCodepage("1252")
+                                .withSummaryCodepage(conf.getCodepage())
                                 .withPlatform("x64"))
                         .withAppIdOrBinaryOrComplianceCheck(new Media()
                                 .withId("1")
-                                .withCabinet("Sample.cab")
+                                .withCabinet("Application.cab")
                                 .withEmbedCab("yes")
-                                .withDiskPrompt("CD-ROM #1"))
-                        .withAppIdOrBinaryOrComplianceCheck(new Property()
-                                .withId("DiskPrompt")
-                                .withValue("Test Property"))
+                        )
                         .withAppIdOrBinaryOrComplianceCheck(new Directory()
                                 .withId("TARGETDIR")
                                 .withName("SourceDir")
@@ -50,23 +45,32 @@ public class DirectoryGenerator {
                                         .withId("ProgramFiles64Folder")
                                         .withComponentOrDirectoryOrMerge(new Directory()
                                                 .withId("INSTALLDIR")
-                                                .withName("TestApp")
-                                                .withComponentOrDirectoryOrMerge((Collection)contents))))
+                                                .withName(conf.getAppName())
+                                                .withComponentOrDirectoryOrMerge((Collection) contents))))
                         .withAppIdOrBinaryOrComplianceCheck(new Feature()
                                 .withId(genId())
-                                .withTitle("Test Feature Title")
-                                .withDescription("Test Feature Description")
-                                .withDisplay("expand")
-                                .withLevel(new BigInteger("1"))
+//                                .withDisplay("expand")
+//                                .withLevel(new BigInteger("1"))
                                 .withConfigurableDirectory("INSTALLDIR")
-                                .withComponentOrComponentGroupRefOrComponentRef((Collection)comprefs))
+                                .withComponentOrComponentGroupRefOrComponentRef((Collection) comprefs))
                         .withAppIdOrBinaryOrComplianceCheck(new Property()
                                 .withId("WIXUI_INSTALLDIR")
                                 .withValue("INSTALLDIR"))
                         .withAppIdOrBinaryOrComplianceCheck(new UIRef()
                                 .withId("WixUI_InstallDir"))
                         .withAppIdOrBinaryOrComplianceCheck(new UIRef()
-                                .withId("WixUI_ErrorProgressText")));
+                                .withId("WixUI_ErrorProgressText"))
+                        .withAppIdOrBinaryOrComplianceCheck((Collection)icon)
+                        .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
+                                .withId("WixUILicenseRtf")
+                                .withValue(conf.getLicenseFilePath()))
+                        .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
+                                .withId("WixUIBannerBmp")
+                                .withValue(conf.getTopBannerPath()))
+                        .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
+                                .withId("WixUIDialogBmp")
+                                .withValue(conf.getGreetingsBannerPath()))
+                );
     }
 
     private String genId() {
@@ -120,5 +124,17 @@ public class DirectoryGenerator {
                         .withDiskId("1")
                         .withSource(file.getPath())
                         .withKeyPath("yes"));
+    }
+
+    private Collection<Object> createIcon(WixConfig conf) {
+        String id = genId();
+        return Arrays.asList(
+                new Icon()
+                        .withId(id)
+                        .withSourceFile(conf.getIconPath()),
+                new Property()
+                        .withId("ARPPRODUCTICON")
+                        .withValue(id)
+        );
     }
 }

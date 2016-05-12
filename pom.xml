@@ -27,6 +27,7 @@
         <version.commons_cli>1.2</version.commons_cli>
         <version.cxf>2.7.0</version.cxf>
         <version.junit>4.11</version.junit>
+        <version.gson>2.2.4</version.gson>
     </properties>
 
     <!-- required for release-plugin -->

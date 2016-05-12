@@ -19,7 +19,7 @@ public class DirectoryGeneratorTest {
 
     @Test
     public void test() throws Exception {
-        Wix wix = new DirectoryGenerator().createFromDir(new File("src"));
+        Wix wix = new DirectoryGenerator().createFromDir(new File("src"), new WixConfig());
         JAXBContext jaxb = JAXBContext.newInstance(Wix.class.getPackage().getName());
         Writer writer = null;
         try {
