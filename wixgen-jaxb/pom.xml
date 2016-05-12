@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>wixgen-jaxb</artifactId>
-    <name>Wix Toolset Scenarios Generator JAXB Classes</name>
+    <name>Wix Toolset Descriptors Generator JAXB Classes</name>
 
     <dependencies>
         <!-- common utilities -->
