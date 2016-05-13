@@ -19,7 +19,7 @@ public class DirectoryGenerator {
     @SuppressWarnings("unchecked") // varargs fluent setter
     public Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
-        Map<String, String> dirids = new HashMap<String, String>();
+        Map<String, String> dirids = new LinkedHashMap<String, String>();
         Collection<Object> files = createContents(dir, comprefs, dirids);
         Collection<Object> icon = createIcon(conf);
         Collection<Object> regs = createRegs(conf, comprefs, dirids);
@@ -204,7 +204,8 @@ public class DirectoryGenerator {
         if (isNotEmpty(dirPath)) {
             String va = dirids.get(dirPath);
             if (null == va)
-                throw new WixConfigException("Invalid 'environmentVariable.dirPath': [" + dirPath + "]");
+                throw new WixConfigException("Invalid 'environmentVariable.dirPath': [" + dirPath + "], " +
+                        " registered paths: [" + dirids.keySet() + "]");
             return "[" + va + "]";
         } else {
             return value;

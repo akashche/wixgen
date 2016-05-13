@@ -80,7 +80,7 @@ public class Launcher {
             Reader re = new InputStreamReader(is, Charset.forName("UTF-8"));
             return new Gson().fromJson(re, WixConfig.class);
         } catch (Exception e) {
-            throw new RuntimeException("Invalid config file: [" + path + "]");
+            throw new RuntimeException("Invalid config file: [" + path + "]", e);
         } finally {
             closeQuietly(is);
         }

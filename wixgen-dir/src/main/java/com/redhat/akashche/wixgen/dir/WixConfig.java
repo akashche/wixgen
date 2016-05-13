@@ -10,9 +10,9 @@ import static org.apache.commons.lang.StringUtils.defaultString;
  */
 public class WixConfig {
     private String appName = "SPECIFY_ME";
-    private int versionMajor = 0;
-    private int versionMinor = 0;
-    private int versionPatch = 0;
+    private String versionMajor = "0";
+    private String versionMinor = "0";
+    private String versionPatch = "0";
     private String vendor = "SPECIFY_ME";
     private int language = 1033;
     private int codepage = 1252;
@@ -39,7 +39,7 @@ public class WixConfig {
     }
 
     public String getVersion() {
-        return Integer.toString(versionMajor) + "." + Integer.toString(versionMinor) + "." + Integer.toString(versionPatch);
+        return defaultString(versionMajor) + "." + defaultString(versionMinor) + "." + defaultString(versionPatch);
     }
 
     public String getLanguage() {
