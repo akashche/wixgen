@@ -51,6 +51,6 @@ This project is released under the [Apache License 2.0](http://www.apache.org/li
 Changelog
 ---------
 
-*2016-05-13*
+**2016-05-13**
 
  * initial public version
