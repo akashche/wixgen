@@ -23,7 +23,7 @@ Javadocs links:
 Usage
 -----
 
-To generate an installer from the input directory prepare the following resources([examples](https://github.com/akashche/wixgen/tree/master/wixgen-dir/src/test/resources/com/redhat/akashche/wixgen/dir)):
+To generate installer from the input directory prepare the following resources([examples](https://github.com/akashche/wixgen/tree/master/wixgen-dir/src/test/resources/com/redhat/akashche/wixgen/dir)):
 
  - greetings banner (BMP, 493x312)
  - top banner (BMP, 493x58)
