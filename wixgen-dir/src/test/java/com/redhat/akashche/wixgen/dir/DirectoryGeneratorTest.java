@@ -53,7 +53,7 @@ public class DirectoryGeneratorTest {
                                         .add(ImmutableMap.builder()
                                                 .put("type", "string")
                                                 .put("name", "Test Path")
-                                                .put("dirPath", "src/test/resources/com")
+                                                .put("value", "[INSTALLDIR]src\\test\\resources\\com")
                                                 .build())
                                         .build())
                                 .build())
@@ -67,7 +67,7 @@ public class DirectoryGeneratorTest {
                         .add(ImmutableMap.builder()
                                 .put("name", "PATH")
                                 .put("action", "set")
-                                .put("dirPath", "src/test/resources/com/redhat")
+                                .put("value", "[INSTALLDIR]src\\test\\resources\\com\\redhat")
                                 .build())
                         .build())
                 .build());

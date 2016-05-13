@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static org.apache.commons.lang.StringUtils.isNotEmpty;
-
 /**
  * User: alexkasko
  * Date: 5/11/16
@@ -19,11 +17,10 @@ public class DirectoryGenerator {
     @SuppressWarnings("unchecked") // varargs fluent setter
     public Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
-        Map<String, String> dirids = new LinkedHashMap<String, String>();
-        Collection<Object> files = createContents(dir, comprefs, dirids);
+        Collection<Object> files = createContents(dir, comprefs);
         Collection<Object> icon = createIcon(conf);
-        Collection<Object> regs = createRegs(conf, comprefs, dirids);
-        Collection<Object> envs = createEnvs(conf, comprefs, dirids);
+        Collection<Object> regs = createRegs(conf, comprefs);
+        Collection<Object> envs = createEnvs(conf, comprefs);
         return new Wix()
                 .withProduct(new Product()
                         .withName(conf.getAppName())
@@ -83,14 +80,14 @@ public class DirectoryGenerator {
         return "_" + UUID.randomUUID().toString().replace('-', '_');
     }
 
-    private List<Object> createContents(File dir, List<ComponentRef> comprefs, Map<String, String> dirids) throws IOException {
+    private List<Object> createContents(File dir, List<ComponentRef> comprefs) throws IOException {
         List<Object> contents = new ArrayList<Object>();
         if (!dir.isDirectory()) throw new IOException("Invalid directory: [" + dir.getAbsolutePath() + "]");
         File[] listing = dir.listFiles();
         if (null == listing) throw new IOException("Cannot list directory: [" + dir.getAbsolutePath() + "]");
         for (File fi : listing) {
             if (fi.isDirectory()) {
-                contents.add(createDirRecursive(fi, comprefs, dirids));
+                contents.add(createDirRecursive(fi, comprefs));
             } else {
                 contents.add(createComp(fi, comprefs));
             }
@@ -98,19 +95,16 @@ public class DirectoryGenerator {
         return contents;
     }
 
-    private Directory createDirRecursive(File dir, List<ComponentRef> comprefs, Map<String, String> dirids) throws IOException {
+    private Directory createDirRecursive(File dir, List<ComponentRef> comprefs) throws IOException {
         if (!dir.isDirectory()) throw new IOException("Invalid directory: [" + dir.getAbsolutePath() + "]");
-        String dirId = genId();
-        // todo: check correct path start element
-        dirids.put(dir.getPath(), dirId);
         Directory res = new Directory()
-                .withId(dirId)
+                .withId(genId())
                 .withName(dir.getName());
         File[] listing = dir.listFiles();
         if (null == listing) throw new IOException("Cannot list directory: [" + dir.getAbsolutePath() + "]");
         for (File fi : listing) {
             if (fi.isDirectory()) {
-                res.withComponentOrDirectoryOrMerge(createDirRecursive(fi, comprefs, dirids));
+                res.withComponentOrDirectoryOrMerge(createDirRecursive(fi, comprefs));
             } else {
                 res.withComponentOrDirectoryOrMerge(createComp(fi, comprefs));
             }
@@ -148,7 +142,7 @@ public class DirectoryGenerator {
     }
 
     @SuppressWarnings("unchecked") // varargs fluent setter
-    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs, Map<String, String> dirids) {
+    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs) {
         List<Object> res = new ArrayList<Object>();
         for (WixConfig.RegistryKey rk : conf.getRegistryKeys()) {
             String id = genId();
@@ -156,11 +150,10 @@ public class DirectoryGenerator {
                     .withId(id));
             Collection<Object> values = new ArrayList<Object>();
             for (WixConfig.RegistryValue rv : rk.values) {
-                String value = resolveDirPath(dirids, rv.getDirPath(), rv.getValue());
                 values.add(new RegistryValue()
                         .withType(rv.getType())
                         .withName(rv.getName())
-                        .withValue(value));
+                        .withValue(rv.getValue()));
             }
             res.add(new Component()
                     .withId(id)
@@ -177,13 +170,12 @@ public class DirectoryGenerator {
         return res;
     }
 
-    private List<Object> createEnvs(WixConfig conf, List<ComponentRef> comprefs, Map<String, String> dirids) {
+    private List<Object> createEnvs(WixConfig conf, List<ComponentRef> comprefs) {
         List<Object> res = new ArrayList<Object>();
         for (WixConfig.EnvironmentVariable ev : conf.getEnvironmentVariables()) {
             String id = genId();
             comprefs.add(new ComponentRef()
                     .withId(id));
-            String value = resolveDirPath(dirids, ev.getDirPath(), ev.getValue());
             res.add(new Component()
                     .withId(id)
                     .withWin64("yes")
@@ -195,20 +187,8 @@ public class DirectoryGenerator {
                             .withAction(ev.getAction())
                             .withSystem(ev.getSystem())
                             .withPart("set".equals(ev.getAction()) ? ev.getPart() : null)
-                            .withValue(value)));
+                            .withValue(ev.getValue())));
         }
         return res;
-    }
-
-    private String resolveDirPath(Map<String, String> dirids, String dirPath, String value) {
-        if (isNotEmpty(dirPath)) {
-            String va = dirids.get(dirPath);
-            if (null == va)
-                throw new WixConfigException("Invalid 'environmentVariable.dirPath': [" + dirPath + "], " +
-                        " registered paths: [" + dirids.keySet() + "]");
-            return "[" + va + "]";
-        } else {
-            return value;
-        }
     }
 }

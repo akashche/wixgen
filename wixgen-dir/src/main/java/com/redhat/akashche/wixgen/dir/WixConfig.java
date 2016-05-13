@@ -88,7 +88,6 @@ public class WixConfig {
         String type = "string";
         String name = "SPECIFY_ME";
         String value = "SPECIFY_ME";
-        String dirPath = "";
 
         public String getType() {
             return defaultString(type);
@@ -101,10 +100,6 @@ public class WixConfig {
         public String getValue() {
             return defaultString(value);
         }
-
-        public String getDirPath() {
-            return defaultString(dirPath);
-        }
     }
 
     static class EnvironmentVariable {
@@ -113,7 +108,6 @@ public class WixConfig {
         private boolean system = true;
         private String part = "first";
         private String value = "SPECIFY_ME";
-        private String dirPath = "";
 
         public String getName() {
             return defaultString(name);
@@ -133,10 +127,6 @@ public class WixConfig {
 
         public String getValue() {
             return defaultString(value);
-        }
-
-        public String getDirPath() {
-            return defaultString(dirPath);
         }
     }
 }
