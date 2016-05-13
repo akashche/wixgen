@@ -17,21 +17,19 @@ Generated installers have simple UI and supports the following features:
 
 Javadocs links:
 
-  - [JAXB classes](http://akashche.github.io/wixgen/wixgen-jaxb/javadocs)
-  - [`DirectoryGenerator` API](http://akashche.github.io/wixgen/wixgen-dir/javadocs)
+  - [JAXB classes](http://akashche.github.io/wixgen/wixgen-jaxb/apidocs)
+  - [`DirectoryGenerator` API](http://akashche.github.io/wixgen/wixgen-dir/apidocs)
 
 Usage example
 -------------
 
-[TODO: LINKS]
+To generate an installer from the input directory prepare the following resources([examples](https://github.com/akashche/wixgen/tree/master/wixgen-dir/src/test/resources/com/redhat/akashche/wixgen/dir)):
 
-To generate an installer from the input directory prepare the following resources:
-
- - greetings banner (BMP, 493x312, [example](TODO))
- - top banner (BMP, 493x58, [example](TODO))
- - application icon (ICO, [example](TODO))
- - license file (RTF, [example](TODO))
- - `wixgen` config file (JSON, [example](TODO))
+ - greetings banner (BMP, 493x312)
+ - top banner (BMP, 493x58)
+ - application icon (ICO)
+ - license file (RTF)
+ - `wixgen` config file (JSON)
 
 Generate WiX `.wxs` descriptor:
 
