@@ -17,12 +17,12 @@ import static org.apache.commons.lang.StringUtils.isNotEmpty;
 public class DirectoryGenerator {
 
     @SuppressWarnings("unchecked") // varargs fluent setter
-    Wix createFromDir(File dir, WixConfig conf) throws IOException {
+    public Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
         Map<String, String> dirids = new HashMap<String, String>();
         Collection<Object> files = createContents(dir, comprefs, dirids);
         Collection<Object> icon = createIcon(conf);
-        Collection<Object> regs = createRegs(conf, comprefs);
+        Collection<Object> regs = createRegs(conf, comprefs, dirids);
         Collection<Object> envs = createEnvs(conf, comprefs, dirids);
         return new Wix()
                 .withProduct(new Product()
@@ -148,7 +148,7 @@ public class DirectoryGenerator {
     }
 
     @SuppressWarnings("unchecked") // varargs fluent setter
-    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs) {
+    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs, Map<String, String> dirids) {
         List<Object> res = new ArrayList<Object>();
         for (WixConfig.RegistryKey rk : conf.getRegistryKeys()) {
             String id = genId();
@@ -156,10 +156,11 @@ public class DirectoryGenerator {
                     .withId(id));
             Collection<Object> values = new ArrayList<Object>();
             for (WixConfig.RegistryValue rv : rk.values) {
+                String value = resolveDirPath(dirids, rv.getDirPath(), rv.getValue());
                 values.add(new RegistryValue()
                         .withType(rv.getType())
                         .withName(rv.getName())
-                        .withValue(rv.getValue()));
+                        .withValue(value));
             }
             res.add(new Component()
                     .withId(id)
@@ -182,15 +183,7 @@ public class DirectoryGenerator {
             String id = genId();
             comprefs.add(new ComponentRef()
                     .withId(id));
-            final String value;
-            if (isNotEmpty(ev.getDirPath())) {
-                String va = dirids.get(ev.getDirPath());
-                if (null == va)
-                    throw new WixConfigException("Invalid 'environmentVariable.dirPath': [" + ev.getDirPath() + "]");
-                value = "[" + va + "]";
-            } else {
-                value = ev.getValue();
-            }
+            String value = resolveDirPath(dirids, ev.getDirPath(), ev.getValue());
             res.add(new Component()
                     .withId(id)
                     .withWin64("yes")
@@ -205,5 +198,16 @@ public class DirectoryGenerator {
                             .withValue(value)));
         }
         return res;
+    }
+
+    private String resolveDirPath(Map<String, String> dirids, String dirPath, String value) {
+        if (isNotEmpty(dirPath)) {
+            String va = dirids.get(dirPath);
+            if (null == va)
+                throw new WixConfigException("Invalid 'environmentVariable.dirPath': [" + dirPath + "]");
+            return "[" + va + "]";
+        } else {
+            return value;
+        }
     }
 }

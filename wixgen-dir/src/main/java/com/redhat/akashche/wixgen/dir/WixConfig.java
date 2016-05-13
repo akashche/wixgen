@@ -86,8 +86,9 @@ public class WixConfig {
 
     static class RegistryValue {
         String type = "string";
-        String name = "";
-        String value = "";
+        String name = "SPECIFY_ME";
+        String value = "SPECIFY_ME";
+        String dirPath = "";
 
         public String getType() {
             return defaultString(type);
@@ -99,6 +100,10 @@ public class WixConfig {
 
         public String getValue() {
             return defaultString(value);
+        }
+
+        public String getDirPath() {
+            return defaultString(dirPath);
         }
     }
 
