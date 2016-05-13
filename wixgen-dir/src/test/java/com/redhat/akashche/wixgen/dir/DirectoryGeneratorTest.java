@@ -1,5 +1,6 @@
 package com.redhat.akashche.wixgen.dir;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -34,6 +35,24 @@ public class DirectoryGeneratorTest {
                 .put("iconPath", "src/test/resources/com/redhat/akashche/wixgen/dir/test_icon.ico")
                 .put("topBannerBmpPath", "src/test/resources/com/redhat/akashche/wixgen/dir/top_banner.bmp")
                 .put("greetingsBannerBmpPath", "src/test/resources/com/redhat/akashche/wixgen/dir/greetings_banner.bmp")
+                .put("registryKeys", ImmutableList.builder()
+                        .add(ImmutableMap.builder()
+                                .put("root", "HKCU")
+                                .put("key", "Software\\Test Wix Application")
+                                .put("values", ImmutableList.builder()
+                                        .add(ImmutableMap.builder()
+                                                .put("type", "string")
+                                                .put("name", "Application Name")
+                                                .put("value", "Test Application")
+                                                .build())
+                                        .add(ImmutableMap.builder()
+                                                .put("type", "integer")
+                                                .put("name", "Version Minor")
+                                                .put("value", "1")
+                                                .build())
+                                        .build())
+                                .build())
+                        .build())
                 .build());
         WixConfig conf = GSON.fromJson(json, WixConfig.class);
         Wix wix = new DirectoryGenerator().createFromDir(new File("src"), conf);

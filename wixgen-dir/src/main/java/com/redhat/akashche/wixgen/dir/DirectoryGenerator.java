@@ -14,10 +14,12 @@ import java.util.*;
  */
 public class DirectoryGenerator {
 
+    @SuppressWarnings("unchecked") // varargs fluent setter
     Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
-        Collection<Object> contents = createContents(dir, comprefs);
+        Collection<Object> files = createContents(dir, comprefs);
         Collection<Object> icon = createIcon(conf);
+        Collection<Object> regs = createRegs(conf, comprefs);
         return new Wix()
                 .withProduct(new Product()
                         .withName(conf.getAppName())
@@ -46,11 +48,10 @@ public class DirectoryGenerator {
                                         .withComponentOrDirectoryOrMerge(new Directory()
                                                 .withId("INSTALLDIR")
                                                 .withName(conf.getAppName())
-                                                .withComponentOrDirectoryOrMerge((Collection) contents))))
+                                                .withComponentOrDirectoryOrMerge((Collection) files)
+                                                .withComponentOrDirectoryOrMerge((Collection) regs))))
                         .withAppIdOrBinaryOrComplianceCheck(new Feature()
                                 .withId(genId())
-//                                .withDisplay("expand")
-//                                .withLevel(new BigInteger("1"))
                                 .withConfigurableDirectory("INSTALLDIR")
                                 .withComponentOrComponentGroupRefOrComponentRef((Collection) comprefs))
                         .withAppIdOrBinaryOrComplianceCheck(new Property()
@@ -136,5 +137,34 @@ public class DirectoryGenerator {
                         .withId("ARPPRODUCTICON")
                         .withValue(id)
         );
+    }
+
+    @SuppressWarnings("unchecked") // varargs fluent setter
+    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs) {
+        List<Object> res = new ArrayList<Object>();
+        for (WixConfig.RegistryKey rk : conf.getRegistryKeys()) {
+            String id = genId();
+            comprefs.add(new ComponentRef()
+                    .withId(id));
+            Collection<Object> values = new ArrayList<Object>();
+            for (WixConfig.RegistryValue rv : rk.values) {
+                values.add(new RegistryValue()
+                        .withType(rv.getType())
+                        .withName(rv.getName())
+                        .withValue(rv.getValue()));
+            }
+            res.add(new Component()
+                    .withId(id)
+                    .withWin64("yes")
+                    .withGuid(UUID.randomUUID().toString())
+                    .withAppIdOrCategoryOrClazz(new RegistryKey()
+                            .withId(genId())
+                            .withForceCreateOnInstall("yes")
+                            .withRoot(RegistryRootType.fromValue(rk.getRoot()))
+                            .withKey(rk.getKey())
+                            .withRegistryKeyOrRegistryValueOrPermission((Collection) values))
+            );
+        }
+        return res;
     }
 }
