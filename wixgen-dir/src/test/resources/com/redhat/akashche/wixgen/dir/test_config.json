@@ -1,0 +1,46 @@
+{
+  "appName": "Test Wix Application",
+  "versionMajor": "0",
+  "versionMinor": "1",
+  "versionPatch": "0",
+  "vendor": "Test Vendor",
+  "licenseFilePath": "src/test/resources/com/redhat/akashche/wixgen/dir/LICENSE.rtf",
+  "iconPath": "src/test/resources/com/redhat/akashche/wixgen/dir/test_icon.ico",
+  "topBannerBmpPath": "src/test/resources/com/redhat/akashche/wixgen/dir/top_banner.bmp",
+  "greetingsBannerBmpPath": "src/test/resources/com/redhat/akashche/wixgen/dir/greetings_banner.bmp",
+  "registryKeys": [
+    {
+      "root": "HKCU",
+      "key": "Software\\Test Wix Application",
+      "values": [
+        {
+          "type": "string",
+          "name": "Application Name",
+          "value": "Test Application"
+        },
+        {
+          "type": "integer",
+          "name": "Version Minor",
+          "value": "1"
+        },
+        {
+          "type": "string",
+          "name": "Test Path",
+          "value": "[INSTALLDIR]src\\test\\resources\\com"
+        }
+      ]
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "TEST_WIX_VAR",
+      "action": "create",
+      "value": "Test Wix Var Contents"
+    },
+    {
+      "name": "PATH",
+      "action": "set",
+      "value": "[INSTALLDIR]src\\test\\resources\\com\\redhat"
+    }
+  ]
+}
