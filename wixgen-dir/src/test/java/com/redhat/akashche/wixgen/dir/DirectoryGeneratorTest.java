@@ -53,6 +53,18 @@ public class DirectoryGeneratorTest {
                                         .build())
                                 .build())
                         .build())
+                .put("environmentVariables", ImmutableList.builder()
+                        .add(ImmutableMap.builder()
+                                .put("name", "TEST_WIX_VAR")
+                                .put("action", "create")
+                                .put("value", "Test Wix Var Contents")
+                                .build())
+                        .add(ImmutableMap.builder()
+                                .put("name", "PATH")
+                                .put("action", "set")
+                                .put("dirPath", "src/test/resources/com/redhat")
+                                .build())
+                        .build())
                 .build());
         WixConfig conf = GSON.fromJson(json, WixConfig.class);
         Wix wix = new DirectoryGenerator().createFromDir(new File("src"), conf);

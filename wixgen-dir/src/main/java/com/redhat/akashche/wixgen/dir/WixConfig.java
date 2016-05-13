@@ -22,9 +22,9 @@ public class WixConfig {
     private String topBannerBmpPath = "SPECIFY_ME";
     // 493x312
     private String greetingsBannerBmpPath = "SPECIFY_ME";
-    // TODO: environment
 
     private ArrayList<RegistryKey> registryKeys = new ArrayList<RegistryKey>();
+    private ArrayList<EnvironmentVariable> environmentVariables = new ArrayList<EnvironmentVariable>();
 
     public String getIconPath() {
         return defaultString(iconPath);
@@ -66,7 +66,11 @@ public class WixConfig {
         return null != registryKeys ? registryKeys : new ArrayList<RegistryKey>();
     }
 
-    public static class RegistryKey {
+    public ArrayList<EnvironmentVariable> getEnvironmentVariables() {
+        return null != environmentVariables ? environmentVariables : new ArrayList<EnvironmentVariable>();
+    }
+
+    static class RegistryKey {
         String root;
         String key;
         ArrayList<RegistryValue> values = new ArrayList<RegistryValue>();
@@ -80,7 +84,7 @@ public class WixConfig {
         }
     }
 
-    public static class RegistryValue {
+    static class RegistryValue {
         String type = "string";
         String name = "";
         String value = "";
@@ -95,6 +99,39 @@ public class WixConfig {
 
         public String getValue() {
             return defaultString(value);
+        }
+    }
+
+    static class EnvironmentVariable {
+        private String name = "SPECIFY_ME";
+        private String action = "create";
+        private boolean system = true;
+        private String part = "first";
+        private String value = "SPECIFY_ME";
+        private String dirPath = "";
+
+        public String getName() {
+            return defaultString(name);
+        }
+
+        public String getAction() {
+            return defaultString(action);
+        }
+
+        public String getSystem() {
+            return system ? "yes" : "no";
+        }
+
+        public String getPart() {
+            return defaultString(part);
+        }
+
+        public String getValue() {
+            return defaultString(value);
+        }
+
+        public String getDirPath() {
+            return defaultString(dirPath);
         }
     }
 }
