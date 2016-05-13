@@ -20,8 +20,8 @@ Javadocs links:
   - [JAXB classes](http://akashche.github.io/wixgen/wixgen-jaxb/apidocs)
   - [`DirectoryGenerator` API](http://akashche.github.io/wixgen/wixgen-dir/apidocs)
 
-Usage example
--------------
+Usage
+-----
 
 To generate an installer from the input directory prepare the following resources([examples](https://github.com/akashche/wixgen/tree/master/wixgen-dir/src/test/resources/com/redhat/akashche/wixgen/dir)):
 
