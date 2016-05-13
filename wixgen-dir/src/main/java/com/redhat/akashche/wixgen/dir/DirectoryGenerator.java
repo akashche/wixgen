@@ -66,10 +66,10 @@ public class DirectoryGenerator {
                                 .withValue(conf.getLicenseFilePath()))
                         .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
                                 .withId("WixUIBannerBmp")
-                                .withValue(conf.getTopBannerPath()))
+                                .withValue(conf.getTopBannerBmpPath()))
                         .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
                                 .withId("WixUIDialogBmp")
-                                .withValue(conf.getGreetingsBannerPath()))
+                                .withValue(conf.getGreetingsBannerBmpPath()))
                 );
     }
 

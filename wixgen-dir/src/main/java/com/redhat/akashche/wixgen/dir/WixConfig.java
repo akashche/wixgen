@@ -1,5 +1,7 @@
 package com.redhat.akashche.wixgen.dir;
 
+import java.util.ArrayList;
+
 import static org.apache.commons.lang.StringUtils.defaultString;
 
 /**
@@ -7,18 +9,22 @@ import static org.apache.commons.lang.StringUtils.defaultString;
  * Date: 5/12/16
  */
 public class WixConfig {
-    private String appName = "Test Wix Application";
+    private String appName = "SPECIFY_ME";
     private int versionMajor = 0;
-    private int versionMinor = 1;
+    private int versionMinor = 0;
     private int versionPatch = 0;
-    private String vendor = "Test Wix Vendor";
+    private String vendor = "SPECIFY_ME";
     private int language = 1033;
     private int codepage = 1252;
-    private String licenseFilePath = "com/redhat/akashche/wixgen/dir/LICENSE.rtf";
-    // TODO: fixme
-    private String iconPath = "com/redhat/akashche/wixgen/dir/test_icon.ico";
-    private String topBannerPath = "com/redhat/akashche/wixgen/dir/top_banner.bmp";
-    private String greetingsBannerPath = "com/redhat/akashche/wixgen/dir/greetings_banner.bmp";
+    private String licenseFilePath = "SPECIFY_ME";
+    private String iconPath = "SPECIFY_ME";
+    // 493x58
+    private String topBannerBmpPath = "SPECIFY_ME";
+    // 493x312
+    private String greetingsBannerBmpPath = "SPECIFY_ME";
+    // TODO: environment
+
+    private ArrayList<RegistryKey> registryKeys = new ArrayList<RegistryKey>();
 
     public String getIconPath() {
         return defaultString(iconPath);
@@ -48,11 +54,47 @@ public class WixConfig {
         return defaultString(licenseFilePath);
     }
 
-    public String getTopBannerPath() {
-        return defaultString(topBannerPath);
+    public String getTopBannerBmpPath() {
+        return defaultString(topBannerBmpPath);
     }
 
-    public String getGreetingsBannerPath() {
-        return defaultString(greetingsBannerPath);
+    public String getGreetingsBannerBmpPath() {
+        return defaultString(greetingsBannerBmpPath);
+    }
+
+    public ArrayList<RegistryKey> getRegistryKeys() {
+        return null != registryKeys ? registryKeys : new ArrayList<RegistryKey>();
+    }
+
+    public static class RegistryKey {
+        String root;
+        String key;
+        ArrayList<RegistryValue> values = new ArrayList<RegistryValue>();
+
+        public String getRoot() {
+            return defaultString(root);
+        }
+
+        public String getKey() {
+            return defaultString(key);
+        }
+    }
+
+    public static class RegistryValue {
+        String type = "string";
+        String name = "";
+        String value = "";
+
+        public String getType() {
+            return defaultString(type);
+        }
+
+        public String getName() {
+            return defaultString(name);
+        }
+
+        public String getValue() {
+            return defaultString(value);
+        }
     }
 }

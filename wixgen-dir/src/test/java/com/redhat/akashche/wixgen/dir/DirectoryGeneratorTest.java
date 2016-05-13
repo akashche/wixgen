@@ -1,5 +1,8 @@
 package com.redhat.akashche.wixgen.dir;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.redhat.akashche.wixgen.jaxb.Wix;
 import org.junit.Test;
 
@@ -16,10 +19,24 @@ import static org.apache.commons.io.IOUtils.closeQuietly;
  * Date: 5/12/16
  */
 public class DirectoryGeneratorTest {
+    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     @Test
     public void test() throws Exception {
-        Wix wix = new DirectoryGenerator().createFromDir(new File("src"), new WixConfig());
+        // emulate externally provided conf file
+        String json = GSON.toJson(ImmutableMap.builder()
+                .put("appName", "Test Wix Application")
+                .put("versionMajor", "0")
+                .put("versionMinor", "1")
+                .put("versionPatch", "0")
+                .put("vendor", "Test Vendor")
+                .put("licenseFilePath", "src/test/resources/com/redhat/akashche/wixgen/dir/LICENSE.rtf")
+                .put("iconPath", "src/test/resources/com/redhat/akashche/wixgen/dir/test_icon.ico")
+                .put("topBannerBmpPath", "src/test/resources/com/redhat/akashche/wixgen/dir/top_banner.bmp")
+                .put("greetingsBannerBmpPath", "src/test/resources/com/redhat/akashche/wixgen/dir/greetings_banner.bmp")
+                .build());
+        WixConfig conf = GSON.fromJson(json, WixConfig.class);
+        Wix wix = new DirectoryGenerator().createFromDir(new File("src"), conf);
         JAXBContext jaxb = JAXBContext.newInstance(Wix.class.getPackage().getName());
         Writer writer = null;
         try {

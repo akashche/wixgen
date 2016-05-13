@@ -26,6 +26,19 @@
             <version>${version.junit}</version>
             <scope>test</scope>
         </dependency>
+        <!-- json "literals" -->
+        <dependency>
+        	<groupId>com.google.guava</groupId>
+        	<artifactId>guava</artifactId>
+        	<version>${version.guava}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- json parsing -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${version.gson}</version>
+        </dependency>
     </dependencies>
 
     
