@@ -3,6 +3,7 @@ package com.redhat.akashche.wixgen.dir;
 import java.util.ArrayList;
 
 import static org.apache.commons.lang.StringUtils.defaultString;
+import static org.apache.commons.lang.StringUtils.isNotEmpty;
 
 /**
  * User: alexkasko
@@ -14,6 +15,10 @@ public class WixConfig {
     private String versionMinor = "0";
     private String versionPatch = "0";
     private String vendor = "SPECIFY_ME";
+    private String vendorDirName = "";
+    private String installDirName = "";
+    private String productUuid = "SPECIFY_ME";
+    private String updateUuid = "SPECIFY_ME";
     private int language = 1033;
     private int codepage = 1252;
     private String licenseFilePath = "SPECIFY_ME";
@@ -36,6 +41,22 @@ public class WixConfig {
 
     public String getVendor() {
         return defaultString(vendor);
+    }
+
+    public String getVendorDirName() {
+        return isNotEmpty(vendorDirName) ? vendorDirName : vendor;
+    }
+
+    public String getInstallDirName() {
+        return isNotEmpty(installDirName) ? installDirName : appName;
+    }
+
+    public String getProductUuid() {
+        return defaultString(productUuid);
+    }
+
+    public String getUpgradeUuid() {
+        return defaultString(updateUuid);
     }
 
     public String getVersion() {
