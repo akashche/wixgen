@@ -28,9 +28,10 @@ import static org.apache.commons.lang.StringUtils.isNotEmpty;
  */
 public class WixConfig {
     private String appName = "SPECIFY_ME";
-    private String versionMajor = "0";
-    private String versionMinor = "0";
-    private String versionPatch = "0";
+    private int versionMajor = 0;
+    private int versionMinor = 0;
+    private int versionMicro = 0;
+    private int versionPatch = 0;
     private String vendor = "SPECIFY_ME";
     private String vendorDirName = "";
     private String installDirName = "";
@@ -77,7 +78,15 @@ public class WixConfig {
     }
 
     public String getVersion() {
-        return defaultString(versionMajor) + "." + defaultString(versionMinor) + "." + defaultString(versionPatch);
+        return new StringBuilder()
+                .append(versionMajor)
+                .append(".")
+                .append(versionMinor)
+                .append(".")
+                .append(versionMicro)
+                .append(".")
+                .append(versionPatch)
+                .toString();
     }
 
     public String getLanguage() {
