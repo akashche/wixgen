@@ -100,6 +100,9 @@ public class DirectoryGenerator {
                         .withAppIdOrBinaryOrComplianceCheck(new WixVariable()
                                 .withId("WixUIDialogBmp")
                                 .withValue(conf.getGreetingsBannerBmpPath()))
+                        .withAppIdOrBinaryOrComplianceCheck(new Property()
+                                .withId("ARPHELPLINK")
+                                .withValue(conf.getHelpLink()))
                 );
     }
 

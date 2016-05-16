@@ -35,6 +35,7 @@ public class WixConfig {
     private String vendor = "SPECIFY_ME";
     private String vendorDirName = "";
     private String installDirName = "";
+    private String helpLink = "";
     private String productUuid = "SPECIFY_ME";
     private String updateUuid = "SPECIFY_ME";
     private int language = 1033;
@@ -67,6 +68,10 @@ public class WixConfig {
 
     public String getInstallDirName() {
         return isNotEmpty(installDirName) ? installDirName : appName;
+    }
+
+    public String getHelpLink() {
+        return defaultString(helpLink);
     }
 
     public String getProductUuid() {
