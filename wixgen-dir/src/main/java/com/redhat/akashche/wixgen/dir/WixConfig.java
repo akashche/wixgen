@@ -38,9 +38,10 @@ public class WixConfig {
     private String helpLink = "";
     private String productUuid = "SPECIFY_ME";
     private String updateUuid = "SPECIFY_ME";
+    private boolean updateEnabled = true;
     private boolean updateAllowDowngrades = false;
     private boolean updateAllowSameVersionUpgrades = true;
-    private String updateDowngradeErrorMessage = "You have a later version of this product installed. Setup will now exit";
+    private String updateDowngradeErrorMessage = "A later version of [ProductName] is already installed. Setup will now exit.";
     private boolean updateIgnoreRemoveFailure = false;
 
     private int language = 1033;
@@ -85,6 +86,10 @@ public class WixConfig {
 
     public String getUpgradeUuid() {
         return defaultString(updateUuid);
+    }
+
+    public boolean isUpdateEnabled() {
+        return updateEnabled;
     }
 
     public boolean isUpdateAllowDowngrades() {

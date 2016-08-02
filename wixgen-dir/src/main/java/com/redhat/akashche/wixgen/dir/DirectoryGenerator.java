@@ -49,7 +49,7 @@ public class DirectoryGenerator {
                 .withProduct(new Product()
                         .withName(conf.getAppName())
                         .withManufacturer(conf.getVendor())
-                        .withId(conf.getProductUuid())
+                        .withId(conf.isUpdateEnabled() ? UUID.randomUUID().toString() : conf.getProductUuid())
                         .withUpgradeCode(conf.getUpgradeUuid())
                         .withLanguage(conf.getLanguage())
                         .withCodepage(conf.getCodepage())
