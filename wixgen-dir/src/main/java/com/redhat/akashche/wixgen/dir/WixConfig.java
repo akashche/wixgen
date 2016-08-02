@@ -38,6 +38,11 @@ public class WixConfig {
     private String helpLink = "";
     private String productUuid = "SPECIFY_ME";
     private String updateUuid = "SPECIFY_ME";
+    private boolean updateAllowDowngrades = false;
+    private boolean updateAllowSameVersionUpgrades = true;
+    private String updateDowngradeErrorMessage = "You have a later version of this product installed. Setup will now exit";
+    private boolean updateIgnoreRemoveFailure = false;
+
     private int language = 1033;
     private int codepage = 1252;
     private String licenseFilePath = "SPECIFY_ME";
@@ -80,6 +85,22 @@ public class WixConfig {
 
     public String getUpgradeUuid() {
         return defaultString(updateUuid);
+    }
+
+    public boolean isUpdateAllowDowngrades() {
+        return updateAllowDowngrades;
+    }
+
+    public boolean isUpdateAllowSameVersionUpgrades() {
+        return updateAllowSameVersionUpgrades;
+    }
+
+    public String getUpdateDowngradeErrorMessage() {
+        return updateDowngradeErrorMessage;
+    }
+
+    public boolean isUpdateIgnoreRemoveFailure() {
+        return updateIgnoreRemoveFailure;
     }
 
     public String getVersion() {

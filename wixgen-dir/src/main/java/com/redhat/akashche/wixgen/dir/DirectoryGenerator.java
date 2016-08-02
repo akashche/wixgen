@@ -102,6 +102,11 @@ public class DirectoryGenerator {
                         .withAppIdOrBinaryOrComplianceCheck(new Property()
                                 .withId("ARPHELPLINK")
                                 .withValue(conf.getHelpLink()))
+                        .withAppIdOrBinaryOrComplianceCheck(new MajorUpgrade()
+                                .withAllowDowngrades(conf.isUpdateAllowDowngrades() ? "yes" : "no")
+                                .withAllowSameVersionUpgrades(conf.isUpdateAllowSameVersionUpgrades() ? "yes" : "no")
+                                .withDowngradeErrorMessage(conf.getUpdateDowngradeErrorMessage())
+                                .withIgnoreRemoveFailure(conf.isUpdateIgnoreRemoveFailure() ? "yes" : "no"))
                 );
     }
 
