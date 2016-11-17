@@ -23,6 +23,12 @@ import org.apache.commons.cli.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.nio.charset.Charset;
 
@@ -36,15 +42,17 @@ import static org.apache.commons.io.IOUtils.closeQuietly;
  * User: akashche
  */
 public class Launcher {
-    private static final String VERSION = "Wix Toolset Descriptors Generator 1.0";
+    private static final String VERSION = "Wix Toolset Descriptors Generator 1.2";
     private static final String HELP_OPTION = "help";
     private static final String VERSION_OPTION = "version";
     private static final String CONFIG_OPTION = "config";
+    private static final String XSL_OPTION = "xsl";
     private static final String OUTPUT_OPTION = "output";
     private static final Options OPTIONS = new Options()
             .addOption("h", HELP_OPTION, false, "show this page")
             .addOption("v", VERSION_OPTION, false, "show version")
             .addOption("c", CONFIG_OPTION, true, "configuration file")
+            .addOption("x", XSL_OPTION, true, "xsl file")
             .addOption("o", OUTPUT_OPTION, true, "output file");
 
     public static void main(String[] args) throws Exception {
@@ -56,10 +64,15 @@ public class Launcher {
                 throw new ParseException("Printing help page:");
             } else if (1 == cline.getArgs().length &&
                     cline.hasOption(CONFIG_OPTION) &&
-                    cline.hasOption(OUTPUT_OPTION)) {
+                    cline.hasOption(OUTPUT_OPTION) &&
+                    !cline.hasOption(XSL_OPTION)) {
                 WixConfig conf = parseConf(cline.getOptionValue(CONFIG_OPTION));
                 Wix wix = new DirectoryGenerator().createFromDir(new File(cline.getArgs()[0]), conf);
                 writeXml(wix, cline.getOptionValue(OUTPUT_OPTION));
+            } else if (1 == cline.getArgs().length &&
+                    cline.hasOption(XSL_OPTION) &&
+                    cline.hasOption(OUTPUT_OPTION)) {
+                transformWithXsl(cline.getArgs()[0], cline.getOptionValue(XSL_OPTION), cline.getOptionValue(OUTPUT_OPTION));
             } else {
                 throw new ParseException("Incorrect arguments received!");
             }
@@ -100,5 +113,17 @@ public class Launcher {
         } finally {
             closeQuietly(is);
         }
+    }
+
+    private static void transformWithXsl(String inputPath, String xslPath, String outputPath) throws Exception {
+        File file = new File(outputPath);
+        if (file.exists()) throw new IOException("Output file already exists: [" + outputPath + "]");
+        TransformerFactory factory = TransformerFactory.newInstance();
+        Source xsl = new StreamSource(new File(xslPath));
+        Transformer transformer = factory.newTransformer(xsl);
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        Source text = new StreamSource(new File(inputPath));
+        transformer.transform(text, new StreamResult(new File(outputPath)));
     }
 }
