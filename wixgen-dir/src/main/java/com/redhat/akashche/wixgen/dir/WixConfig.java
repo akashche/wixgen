@@ -16,6 +16,7 @@
 package com.redhat.akashche.wixgen.dir;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import static org.apache.commons.lang.StringUtils.defaultString;
 import static org.apache.commons.lang.StringUtils.isNotEmpty;
@@ -37,6 +38,12 @@ public class WixConfig {
     private String installDirName = "";
     private String helpLink = "";
     private String productUuid = "SPECIFY_ME";
+
+    private boolean useFeatureTree = false;
+    private String featureId = "_" + UUID.randomUUID().toString().replace('-', '_');
+    private String featureTitle = "SPECIFY_ME";
+    private String featureDescription = "SPECIFY_ME";
+
     private String updateUuid = "SPECIFY_ME";
     private boolean updateEnabled = true;
     private boolean updateAllowDowngrades = false;
@@ -82,6 +89,22 @@ public class WixConfig {
 
     public String getProductUuid() {
         return defaultString(productUuid);
+    }
+
+    public boolean isUseFeatureTree() {
+        return useFeatureTree;
+    }
+
+    public String getFeatureId() {
+        return defaultString(featureId);
+    }
+
+    public String getFeatureTitle() {
+        return defaultString(featureTitle);
+    }
+
+    public String getFeatureDescription() {
+        return defaultString(featureDescription);
     }
 
     public String getUpgradeUuid() {
