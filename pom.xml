@@ -21,12 +21,12 @@
         <project.implementation_vendor>Red Hat Inc.</project.implementation_vendor>
         <!-- dependencies versions -->
         <version.commons_lang>2.6</version.commons_lang>
-        <version.commons_io>2.4</version.commons_io>
+        <version.commons_io>2.5</version.commons_io>
         <version.commons_cli>1.2</version.commons_cli>
-        <version.cxf>2.7.0</version.cxf>
-        <version.junit>4.11</version.junit>
-        <version.gson>2.2.4</version.gson>
-        <version.guava>10.0.1</version.guava>
+        <version.cxf>3.1.0</version.cxf>
+        <version.junit>4.12</version.junit>
+        <version.gson>2.8.0</version.gson>
+        <version.guava>21.0</version.guava>
         <!-- plugins versions -->
         <version.maven_compiler_plugin>3.1</version.maven_compiler_plugin>
         <version.maven_jar_plugin>2.4</version.maven_jar_plugin>
