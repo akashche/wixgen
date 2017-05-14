@@ -85,12 +85,10 @@ public class Launcher {
     }
 
     private static void writeXml(Wix wix, String path) throws Exception {
-        File file = new File(path);
-        if (file.exists()) throw new IOException("Output file already exists: [" + path + "]");
         JAXBContext jaxb = JAXBContext.newInstance(Wix.class.getPackage().getName());
         Writer writer = null;
         try {
-            OutputStream os = new FileOutputStream(file);
+            OutputStream os = new FileOutputStream(new File(path));
             writer = new OutputStreamWriter(os, Charset.forName("UTF-8"));
             Marshaller marshaller = jaxb.createMarshaller();
             marshaller.setProperty(JAXB_FORMATTED_OUTPUT, true);
