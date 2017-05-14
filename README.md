@@ -51,6 +51,11 @@ This project is released under the [Apache License 2.0](http://www.apache.org/li
 Changelog
 ---------
 
+**2017-05-14**
+
+ * version `1.3`
+ * support for `(Default)` registry keys
+
 **2016-05-13**
 
  * initial public version
