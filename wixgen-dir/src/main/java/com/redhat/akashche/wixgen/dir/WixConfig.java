@@ -187,7 +187,7 @@ public class WixConfig {
 
     static class RegistryValue {
         String type = "string";
-        String name = "SPECIFY_ME";
+        String name = "";
         String value = "SPECIFY_ME";
 
         public String getType() {

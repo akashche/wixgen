@@ -188,10 +188,13 @@ public class DirectoryGenerator {
                     .withId(id));
             Collection<Object> values = new ArrayList<Object>();
             for (WixConfig.RegistryValue rv : rk.values) {
-                values.add(new RegistryValue()
+                RegistryValue val = new RegistryValue()
                         .withType(rv.getType())
-                        .withName(rv.getName())
-                        .withValue(rv.getValue()));
+                        .withValue(rv.getValue());
+                if (!rv.getName().isEmpty()) {
+                    val.setName(rv.getName());
+                }
+                values.add(val);
             }
             res.add(new Component()
                     .withId(id)
