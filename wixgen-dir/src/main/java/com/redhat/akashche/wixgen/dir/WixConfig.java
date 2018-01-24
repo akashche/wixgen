@@ -51,6 +51,7 @@ public class WixConfig {
     private String updateDowngradeErrorMessage = "A later version of [ProductName] is already installed. Setup will now exit.";
     private boolean updateIgnoreRemoveFailure = false;
 
+    private boolean win64 = true;
     private int language = 1033;
     private int codepage = 1252;
     private String licenseFilePath = "SPECIFY_ME";
@@ -141,6 +142,10 @@ public class WixConfig {
                 .append(".")
                 .append(versionPatch)
                 .toString();
+    }
+
+    public boolean isWin64() {
+        return win64;
     }
 
     public String getLanguage() {

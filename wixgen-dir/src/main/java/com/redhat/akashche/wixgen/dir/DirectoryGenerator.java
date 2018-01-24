@@ -41,7 +41,7 @@ public class DirectoryGenerator {
     @SuppressWarnings("unchecked") // varargs fluent setter
     public Wix createFromDir(File dir, WixConfig conf) throws IOException {
         List<ComponentRef> comprefs = new ArrayList<ComponentRef>();
-        Collection<Object> files = createContents(dir, comprefs);
+        Collection<Object> files = createContents(conf, dir, comprefs);
         Collection<Object> icon = createIcon(conf);
         Collection<Object> regs = createRegs(conf, comprefs);
         Collection<Object> envs = createEnvs(conf, comprefs);
@@ -59,7 +59,7 @@ public class DirectoryGenerator {
                                 .withLanguages(conf.getLanguage())
                                 .withCompressed("yes")
                                 .withSummaryCodepage(conf.getCodepage())
-                                .withPlatform("x64"))
+                                .withPlatform(conf.isWin64() ? "x64" : "x86"))
                         .withAppIdOrBinaryOrComplianceCheck(new Media()
                                 .withId("1")
                                 .withCabinet("Application.cab")
@@ -68,7 +68,7 @@ public class DirectoryGenerator {
                                 .withId("TARGETDIR")
                                 .withName("SourceDir")
                                 .withComponentOrDirectoryOrMerge(new Directory()
-                                        .withId("ProgramFiles64Folder")
+                                        .withId(conf.isWin64() ? "ProgramFiles64Folder" : "ProgramFilesFolder")
                                         .withComponentOrDirectoryOrMerge(new Directory()
                                                 .withId(genId())
                                                 .withName(conf.getVendorDirName())
@@ -118,22 +118,22 @@ public class DirectoryGenerator {
         return "_" + UUID.randomUUID().toString().replace('-', '_');
     }
 
-    private List<Object> createContents(File dir, List<ComponentRef> comprefs) throws IOException {
+    private List<Object> createContents(WixConfig conf, File dir, List<ComponentRef> comprefs) throws IOException {
         List<Object> contents = new ArrayList<Object>();
         if (!dir.isDirectory()) throw new IOException("Invalid directory: [" + dir.getAbsolutePath() + "]");
         File[] listing = dir.listFiles();
         if (null == listing) throw new IOException("Cannot list directory: [" + dir.getAbsolutePath() + "]");
         for (File fi : listing) {
             if (fi.isDirectory()) {
-                contents.add(createDirRecursive(fi, comprefs));
+                contents.add(createDirRecursive(conf, fi, comprefs));
             } else {
-                contents.add(createComp(fi, comprefs));
+                contents.add(createComp(conf, fi, comprefs));
             }
         }
         return contents;
     }
 
-    private Directory createDirRecursive(File dir, List<ComponentRef> comprefs) throws IOException {
+    private Directory createDirRecursive(WixConfig conf, File dir, List<ComponentRef> comprefs) throws IOException {
         if (!dir.isDirectory()) throw new IOException("Invalid directory: [" + dir.getAbsolutePath() + "]");
         Directory res = new Directory()
                 .withId(genId())
@@ -142,22 +142,22 @@ public class DirectoryGenerator {
         if (null == listing) throw new IOException("Cannot list directory: [" + dir.getAbsolutePath() + "]");
         for (File fi : listing) {
             if (fi.isDirectory()) {
-                res.withComponentOrDirectoryOrMerge(createDirRecursive(fi, comprefs));
+                res.withComponentOrDirectoryOrMerge(createDirRecursive(conf, fi, comprefs));
             } else {
-                res.withComponentOrDirectoryOrMerge(createComp(fi, comprefs));
+                res.withComponentOrDirectoryOrMerge(createComp(conf, fi, comprefs));
             }
         }
         return res;
     }
 
-    private Component createComp(File file, List<ComponentRef> comprefs) throws IOException {
+    private Component createComp(WixConfig conf, File file, List<ComponentRef> comprefs) throws IOException {
         if (!file.isFile()) throw new IOException("Invalid file: [" + file.getAbsolutePath() + "]");
         String id = genId();
         comprefs.add(new ComponentRef()
                 .withId(id));
         return new Component()
                 .withId(id)
-                .withWin64("yes")
+                .withWin64(conf.isWin64() ? "yes" : "no")
                 .withGuid(UUID.randomUUID().toString())
                 .withAppIdOrCategoryOrClazz(new com.redhat.akashche.wixgen.jaxb.File()
                         .withId(genId())
@@ -198,7 +198,7 @@ public class DirectoryGenerator {
             }
             res.add(new Component()
                     .withId(id)
-                    .withWin64("yes")
+                    .withWin64(conf.isWin64() ? "yes" : "no")
                     .withGuid(UUID.randomUUID().toString())
                     .withAppIdOrCategoryOrClazz(new RegistryKey()
                             .withId(genId())
@@ -219,7 +219,7 @@ public class DirectoryGenerator {
                     .withId(id));
             res.add(new Component()
                     .withId(id)
-                    .withWin64("yes")
+                    .withWin64(conf.isWin64() ? "yes" : "no")
                     .withGuid(UUID.randomUUID().toString())
                     .withKeyPath("yes")
                     .withAppIdOrCategoryOrClazz(new Environment()
