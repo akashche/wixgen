@@ -27,6 +27,7 @@
         <version.junit>4.12</version.junit>
         <version.gson>2.8.0</version.gson>
         <version.guava>21.0</version.guava>
+        <version.jaxb>2.2.11</version.jaxb>
         <!-- plugins versions -->
         <version.maven_compiler_plugin>3.1</version.maven_compiler_plugin>
         <version.maven_jar_plugin>2.4</version.maven_jar_plugin>
