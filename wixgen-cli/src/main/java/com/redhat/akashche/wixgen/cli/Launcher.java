@@ -42,7 +42,7 @@ import static org.apache.commons.io.IOUtils.closeQuietly;
  * User: akashche
  */
 public class Launcher {
-    private static final String VERSION = "Wix Toolset Descriptors Generator 1.3";
+    private static final String VERSION = "Wix Toolset Descriptors Generator 1.5.1";
     private static final String HELP_OPTION = "help";
     private static final String VERSION_OPTION = "version";
     private static final String CONFIG_OPTION = "config";

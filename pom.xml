@@ -4,7 +4,7 @@
 
     <groupId>com.redhat.akashche</groupId>
     <artifactId>wixgen-parent</artifactId>
-    <version>1.6-SNAPSHOT</version>
+    <version>1.5.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Wix Toolset Descriptors Generator Parent</name>
 
@@ -28,6 +28,7 @@
         <version.gson>2.8.0</version.gson>
         <version.guava>21.0</version.guava>
         <version.jaxb>2.2.11</version.jaxb>
+        <version.activation>1.1.1</version.activation>
         <!-- plugins versions -->
         <version.maven_compiler_plugin>3.1</version.maven_compiler_plugin>
         <version.maven_jar_plugin>2.4</version.maven_jar_plugin>

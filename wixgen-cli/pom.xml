@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.redhat.akashche</groupId>
         <artifactId>wixgen-parent</artifactId>
-        <version>1.6-SNAPSHOT</version>
+        <version>1.5.1-SNAPSHOT</version>
     </parent>
     <artifactId>wixgen-cli</artifactId>
     <name>Wix Toolset Descriptors Generator CLI Application</name>

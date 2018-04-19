@@ -51,6 +51,16 @@ This project is released under the [Apache License 2.0](http://www.apache.org/li
 Changelog
 ---------
 
+**2018-04-18**
+
+ * version `1.5.1`
+ * jdk10 support
+
+**2018-01-24**
+
+ * version `1.4`
+ * 32-bit installers support
+
 **2017-05-14**
 
  * version `1.3`
