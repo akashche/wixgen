@@ -4,7 +4,7 @@
 
     <groupId>com.redhat.akashche</groupId>
     <artifactId>wixgen-parent</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Wix Toolset Descriptors Generator Parent</name>
 
@@ -45,7 +45,7 @@
     <!-- required for release-plugin -->
     <scm>
         <connection>scm:git:https://foo/bar.git</connection>
-        <tag>1.5.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
