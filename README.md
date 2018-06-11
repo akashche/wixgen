@@ -43,6 +43,16 @@ Build the installer from `.wixobj` object file:
 
     light -ext WixUIExtension myapp.wixobj
 
+Building with non-english locale
+--------------------------------
+
+When building `wixgen` with non-english system locale it may be required to specify `en` locale through
+environment variable:
+
+    MAVEN_OPTS=-Duser.langage=en
+
+See [issue #2](https://github.com/akashche/wixgen/issues/2) for details.
+
 License information
 -------------------
 
