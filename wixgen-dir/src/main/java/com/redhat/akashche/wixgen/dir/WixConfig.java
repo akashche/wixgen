@@ -41,6 +41,8 @@ public class WixConfig {
 
     private boolean useFeatureTree = false;
     private String featureId = "_" + UUID.randomUUID().toString().replace('-', '_');
+    private boolean featureOptional = false;
+    private int featureLevel = 1;
     private String featureTitle = "SPECIFY_ME";
     private String featureDescription = "SPECIFY_ME";
 
@@ -98,6 +100,14 @@ public class WixConfig {
 
     public String getFeatureId() {
         return defaultString(featureId);
+    }
+
+    public boolean isFeatureOptional() {
+        return featureOptional;
+    }
+
+    public int getFeatureLevel() {
+        return featureLevel;
     }
 
     public String getFeatureTitle() {
