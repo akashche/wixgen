@@ -18,6 +18,8 @@ package com.redhat.akashche.wixgen.cli;
 import com.google.gson.Gson;
 import com.redhat.akashche.wixgen.dir.DirectoryGenerator;
 import com.redhat.akashche.wixgen.dir.WixConfig;
+import com.redhat.akashche.wixgen.jaxb.Directory;
+import com.redhat.akashche.wixgen.jaxb.Feature;
 import com.redhat.akashche.wixgen.jaxb.Wix;
 import org.apache.commons.cli.*;
 
@@ -32,6 +34,8 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.nio.charset.Charset;
 
+import static com.redhat.akashche.wixgen.dir.DirectoryGenerator.findWixDirectory;
+import static com.redhat.akashche.wixgen.dir.DirectoryGenerator.findWixFeature;
 import static java.lang.System.out;
 import static javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT;
 import static org.apache.commons.io.IOUtils.closeQuietly;
@@ -42,18 +46,22 @@ import static org.apache.commons.io.IOUtils.closeQuietly;
  * User: akashche
  */
 public class Launcher {
-    private static final String VERSION = "Wix Toolset Descriptors Generator 1.5.1";
+    private static final String VERSION = "Wix Toolset Descriptors Generator 1.6";
     private static final String HELP_OPTION = "help";
     private static final String VERSION_OPTION = "version";
     private static final String CONFIG_OPTION = "config";
     private static final String XSL_OPTION = "xsl";
     private static final String OUTPUT_OPTION = "output";
+    private static final String DIRECTORY_OPTION = "directory";
+    private static final String FEATURE_OPTION = "feature";
     private static final Options OPTIONS = new Options()
             .addOption("h", HELP_OPTION, false, "show this page")
             .addOption("v", VERSION_OPTION, false, "show version")
             .addOption("c", CONFIG_OPTION, true, "configuration file")
             .addOption("x", XSL_OPTION, true, "xsl file")
-            .addOption("o", OUTPUT_OPTION, true, "output file");
+            .addOption("o", OUTPUT_OPTION, true, "output file")
+            .addOption("d", DIRECTORY_OPTION, true, "output feature directory file")
+            .addOption("f", FEATURE_OPTION, true, "output feature refs file");
 
     public static void main(String[] args) throws Exception {
         try {
@@ -68,7 +76,16 @@ public class Launcher {
                     !cline.hasOption(XSL_OPTION)) {
                 WixConfig conf = parseConf(cline.getOptionValue(CONFIG_OPTION));
                 Wix wix = new DirectoryGenerator().createFromDir(new File(cline.getArgs()[0]), conf);
-                writeXml(wix, cline.getOptionValue(OUTPUT_OPTION));
+                Marshaller marshaller = createMarshaller();
+                writeXml(marshaller, wix, cline.getOptionValue(OUTPUT_OPTION), false);
+                if (cline.hasOption(DIRECTORY_OPTION)) {
+                    Directory dir = findWixDirectory(wix);
+                    writeXml(marshaller, dir, cline.getOptionValue(DIRECTORY_OPTION), true);
+                }
+                if (cline.hasOption(FEATURE_OPTION)) {
+                    Feature feature = findWixFeature(wix);
+                    writeXml(marshaller, feature, cline.getOptionValue(FEATURE_OPTION), true);
+                }
             } else if (1 == cline.getArgs().length &&
                     cline.hasOption(XSL_OPTION) &&
                     cline.hasOption(OUTPUT_OPTION)) {
@@ -84,15 +101,20 @@ public class Launcher {
         }
     }
 
-    private static void writeXml(Wix wix, String path) throws Exception {
+    private static Marshaller createMarshaller() throws Exception {
         JAXBContext jaxb = JAXBContext.newInstance(Wix.class.getPackage().getName());
+        Marshaller marshaller = jaxb.createMarshaller();
+        marshaller.setProperty(JAXB_FORMATTED_OUTPUT, true);
+        return marshaller;
+    }
+
+    private static void writeXml(Marshaller marshaller, Object jaxbElement, String path, boolean fragment) throws Exception {
         Writer writer = null;
         try {
             OutputStream os = new FileOutputStream(new File(path));
             writer = new OutputStreamWriter(os, Charset.forName("UTF-8"));
-            Marshaller marshaller = jaxb.createMarshaller();
-            marshaller.setProperty(JAXB_FORMATTED_OUTPUT, true);
-            marshaller.marshal(wix, writer);
+            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, fragment);
+            marshaller.marshal(jaxbElement, writer);
         } finally {
             closeQuietly(writer);
         }

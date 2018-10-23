@@ -19,6 +19,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.redhat.akashche.wixgen.jaxb.Directory;
+import com.redhat.akashche.wixgen.jaxb.Feature;
 import com.redhat.akashche.wixgen.jaxb.Wix;
 import org.junit.Test;
 
@@ -27,6 +29,8 @@ import javax.xml.bind.Marshaller;
 import java.io.*;
 import java.nio.charset.Charset;
 
+import static com.redhat.akashche.wixgen.dir.DirectoryGenerator.findWixDirectory;
+import static com.redhat.akashche.wixgen.dir.DirectoryGenerator.findWixFeature;
 import static javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT;
 import static org.apache.commons.io.IOUtils.closeQuietly;
 
@@ -88,13 +92,32 @@ public class DirectoryGeneratorTest {
         WixConfig conf = GSON.fromJson(json, WixConfig.class);
         Wix wix = new DirectoryGenerator().createFromDir(new File("src"), conf);
         JAXBContext jaxb = JAXBContext.newInstance(Wix.class.getPackage().getName());
+        Marshaller marshaller = jaxb.createMarshaller();
+        marshaller.setProperty(JAXB_FORMATTED_OUTPUT, true);
         Writer writer = null;
         try {
             OutputStream os = new FileOutputStream("target/test.wxs");
             writer = new OutputStreamWriter(os, Charset.forName("UTF-8"));
-            Marshaller marshaller = jaxb.createMarshaller();
-            marshaller.setProperty(JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(wix, writer);
+        } finally {
+            closeQuietly(writer);
+        }
+
+        marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+        try {
+            OutputStream os = new FileOutputStream("target/components.xml");
+            writer = new OutputStreamWriter(os, Charset.forName("UTF-8"));
+            Directory dir = findWixDirectory(wix);
+            marshaller.marshal(dir, writer);
+        } finally {
+            closeQuietly(writer);
+        }
+
+        try {
+            OutputStream os = new FileOutputStream("target/feature.xml");
+            writer = new OutputStreamWriter(os, Charset.forName("UTF-8"));
+            Feature dir = findWixFeature(wix);
+            marshaller.marshal(dir, writer);
         } finally {
             closeQuietly(writer);
         }

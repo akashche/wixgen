@@ -43,6 +43,8 @@ public class WixConfig {
     private String featureId = "_" + UUID.randomUUID().toString().replace('-', '_');
     private boolean featureOptional = false;
     private int featureLevel = 1;
+    private String featureDirectoryId = "INSTALLDIR";
+    private boolean featureConfigurableDirectory = true;
     private String featureTitle = "SPECIFY_ME";
     private String featureDescription = "SPECIFY_ME";
 
@@ -108,6 +110,14 @@ public class WixConfig {
 
     public int getFeatureLevel() {
         return featureLevel;
+    }
+
+    public String getFeatureDirectoryId() {
+        return defaultString(featureDirectoryId);
+    }
+
+    public boolean isFeatureConfigurableDirectory() {
+        return featureConfigurableDirectory;
     }
 
     public String getFeatureTitle() {

@@ -73,23 +73,15 @@ public class DirectoryGenerator {
                                                 .withId(genId())
                                                 .withName(conf.getVendorDirName())
                                                 .withComponentOrDirectoryOrMerge(new Directory()
-                                                        .withId("INSTALLDIR")
+                                                        .withId(conf.getFeatureDirectoryId())
                                                         .withName(conf.getInstallDirName())
                                                         .withComponentOrDirectoryOrMerge((Collection) files)
                                                         .withComponentOrDirectoryOrMerge((Collection) regs)
                                                         .withComponentOrDirectoryOrMerge((Collection) envs)))))
-                        .withAppIdOrBinaryOrComplianceCheck(new Feature()
-                                .withId(conf.getFeatureId())
-                                .withAbsent(conf.isFeatureOptional() ? "allow" : "disallow")
-                                .withLevel(BigInteger.valueOf(conf.getFeatureLevel()))
-                                .withAllowAdvertise("no")
-                                .withConfigurableDirectory("INSTALLDIR")
-                                .withTitle(conf.getFeatureTitle())
-                                .withDescription(conf.getFeatureDescription())
-                                .withComponentOrComponentGroupRefOrComponentRef((Collection) comprefs))
+                        .withAppIdOrBinaryOrComplianceCheck(createFeature(conf, comprefs))
                         .withAppIdOrBinaryOrComplianceCheck(new Property()
                                 .withId("WIXUI_INSTALLDIR")
-                                .withValue("INSTALLDIR"))
+                                .withValue(conf.getFeatureDirectoryId()))
                         .withAppIdOrBinaryOrComplianceCheck(new UIRef()
                                 .withId(conf.isUseFeatureTree() ? "WixUI_FeatureTree" : "WixUI_InstallDir"))
                         .withAppIdOrBinaryOrComplianceCheck(new UIRef()
@@ -115,7 +107,40 @@ public class DirectoryGenerator {
                 );
     }
 
-    private String genId() {
+    /**
+     * Extracts the root directory element from an installer descriptor
+     *
+     * @param wix WiX installer descriptor as a JAXB object
+     * @return root directory element
+     */
+    public static Directory findWixDirectory(Wix wix) {
+        for (Object obj : wix.getProduct().getAppIdOrBinaryOrComplianceCheck()) {
+            if (obj instanceof Directory) {
+                Directory target = (Directory) obj;
+                Directory pf = (Directory) target.getComponentOrDirectoryOrMerge().get(0);
+                Directory vendor = (Directory) pf.getComponentOrDirectoryOrMerge().get(0);
+                return (Directory) vendor.getComponentOrDirectoryOrMerge().get(0);
+            }
+        }
+        throw new RuntimeException("Cannot find feature directory");
+    }
+
+    /**
+     * Extracts the feature element from an installer descriptor
+     *
+     * @param wix WiX installer descriptor as a JAXB object
+     * @return feature element
+     */
+    public static Feature findWixFeature(Wix wix) {
+        for (Object obj : wix.getProduct().getAppIdOrBinaryOrComplianceCheck()) {
+            if (obj instanceof Feature) {
+                return (Feature) obj;
+            }
+        }
+        throw new RuntimeException("Cannot find feature");
+    }
+
+    private static String genId() {
         return "_" + UUID.randomUUID().toString().replace('-', '_');
     }
 
@@ -134,7 +159,7 @@ public class DirectoryGenerator {
         return contents;
     }
 
-    private Directory createDirRecursive(WixConfig conf, File dir, List<ComponentRef> comprefs) throws IOException {
+    private static Directory createDirRecursive(WixConfig conf, File dir, List<ComponentRef> comprefs) throws IOException {
         if (!dir.isDirectory()) throw new IOException("Invalid directory: [" + dir.getAbsolutePath() + "]");
         Directory res = new Directory()
                 .withId(genId())
@@ -151,7 +176,7 @@ public class DirectoryGenerator {
         return res;
     }
 
-    private Component createComp(WixConfig conf, File file, List<ComponentRef> comprefs) throws IOException {
+    private static Component createComp(WixConfig conf, File file, List<ComponentRef> comprefs) throws IOException {
         if (!file.isFile()) throw new IOException("Invalid file: [" + file.getAbsolutePath() + "]");
         String id = genId();
         comprefs.add(new ComponentRef()
@@ -168,7 +193,23 @@ public class DirectoryGenerator {
                         .withKeyPath("yes"));
     }
 
-    private Collection<Object> createIcon(WixConfig conf) {
+    @SuppressWarnings("unchecked") // varargs fluent setter
+    private static Feature createFeature(WixConfig conf, List<ComponentRef> comprefs) {
+        Feature feature = new Feature()
+                .withId(conf.getFeatureId())
+                .withAbsent(conf.isFeatureOptional() ? "allow" : "disallow")
+                .withLevel(BigInteger.valueOf(conf.getFeatureLevel()))
+                .withAllowAdvertise("no")
+                .withTitle(conf.getFeatureTitle())
+                .withDescription(conf.getFeatureDescription())
+                .withComponentOrComponentGroupRefOrComponentRef((Collection) comprefs);
+        if (conf.isFeatureConfigurableDirectory()) {
+            feature.setConfigurableDirectory(conf.getFeatureDirectoryId());
+        }
+        return feature;
+    }
+
+    private static Collection<Object> createIcon(WixConfig conf) {
         String id = genId();
         return Arrays.asList(
                 new Icon()
@@ -181,7 +222,7 @@ public class DirectoryGenerator {
     }
 
     @SuppressWarnings("unchecked") // varargs fluent setter
-    private Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs) {
+    private static Collection<Object> createRegs(WixConfig conf, List<ComponentRef> comprefs) {
         List<Object> res = new ArrayList<Object>();
         for (WixConfig.RegistryKey rk : conf.getRegistryKeys()) {
             String id = genId();
@@ -212,7 +253,7 @@ public class DirectoryGenerator {
         return res;
     }
 
-    private List<Object> createEnvs(WixConfig conf, List<ComponentRef> comprefs) {
+    private static List<Object> createEnvs(WixConfig conf, List<ComponentRef> comprefs) {
         List<Object> res = new ArrayList<Object>();
         for (WixConfig.EnvironmentVariable ev : conf.getEnvironmentVariables()) {
             String id = genId();
