@@ -59,6 +59,7 @@ public class DirectoryGenerator {
                                 .withLanguages(conf.getLanguage())
                                 .withCompressed("yes")
                                 .withSummaryCodepage(conf.getCodepage())
+                                .withInstallScope(conf.isPackageInstallPerUser() ? "perUser" : "perMachine")
                                 .withPlatform(conf.isWin64() ? "x64" : "x86"))
                         .withAppIdOrBinaryOrComplianceCheck(new Media()
                                 .withId("1")

@@ -38,6 +38,7 @@ public class WixConfig {
     private String installDirName = "";
     private String helpLink = "";
     private String productUuid = "SPECIFY_ME";
+    private boolean packageInstallPerUser = false;
 
     private boolean useFeatureTree = false;
     private String featureId = "_" + UUID.randomUUID().toString().replace('-', '_');
@@ -94,6 +95,10 @@ public class WixConfig {
 
     public String getProductUuid() {
         return defaultString(productUuid);
+    }
+
+    public boolean isPackageInstallPerUser() {
+        return packageInstallPerUser;
     }
 
     public boolean isUseFeatureTree() {
