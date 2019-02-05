@@ -61,6 +61,17 @@ This project is released under the [Apache License 2.0](http://www.apache.org/li
 Changelog
 ---------
 
+**2019-02-05**
+
+ * version `1.7`
+ * support `perUser/perMachine` flag for `package`
+
+**2018-10-23**
+
+ * version `1.6`
+ * more config options
+ * allow to generate `feature` and `directory` parts of the descriptor
+
 **2018-04-18**
 
  * version `1.5.1`
