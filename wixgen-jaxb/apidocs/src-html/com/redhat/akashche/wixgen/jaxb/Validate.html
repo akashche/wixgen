@@ -28,41 +28,41 @@
 <span class="sourceLineNo">020</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.20"></a>
 <span class="sourceLineNo">021</span> * <a name="line.21"></a>
 <span class="sourceLineNo">022</span> * &lt;pre&gt;<a name="line.22"></a>
-<span class="sourceLineNo">023</span> * &amp;lt;complexType&gt;<a name="line.23"></a>
-<span class="sourceLineNo">024</span> *   &amp;lt;complexContent&gt;<a name="line.24"></a>
-<span class="sourceLineNo">025</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.25"></a>
-<span class="sourceLineNo">026</span> *       &amp;lt;attribute name="ProductId" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.26"></a>
-<span class="sourceLineNo">027</span> *       &amp;lt;attribute name="ProductLanguage" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="no" /&gt;<a name="line.27"></a>
-<span class="sourceLineNo">028</span> *       &amp;lt;attribute name="ProductVersion" default="Update"&gt;<a name="line.28"></a>
-<span class="sourceLineNo">029</span> *         &amp;lt;simpleType&gt;<a name="line.29"></a>
-<span class="sourceLineNo">030</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.30"></a>
-<span class="sourceLineNo">031</span> *             &amp;lt;enumeration value="Major"/&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> *             &amp;lt;enumeration value="Minor"/&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *             &amp;lt;enumeration value="Update"/&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *           &amp;lt;/restriction&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *         &amp;lt;/simpleType&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *       &amp;lt;/attribute&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *       &amp;lt;attribute name="ProductVersionOperator" default="Equal"&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;simpleType&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *             &amp;lt;enumeration value="Lesser"/&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *             &amp;lt;enumeration value="LesserOrEqual"/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *             &amp;lt;enumeration value="Equal"/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *             &amp;lt;enumeration value="GreaterOrEqual"/&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *             &amp;lt;enumeration value="Greater"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *           &amp;lt;/restriction&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *         &amp;lt;/simpleType&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *       &amp;lt;/attribute&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *       &amp;lt;attribute name="UpgradeCode" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *       &amp;lt;attribute name="IgnoreAddExistingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *       &amp;lt;attribute name="IgnoreAddExistingTable" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *       &amp;lt;attribute name="IgnoreDeleteMissingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *       &amp;lt;attribute name="IgnoreDeleteMissingTable" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *       &amp;lt;attribute name="IgnoreUpdateMissingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *       &amp;lt;attribute name="IgnoreChangingCodePage" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="no" /&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *     &amp;lt;/restriction&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *   &amp;lt;/complexContent&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> * &amp;lt;/complexType&gt;<a name="line.57"></a>
+<span class="sourceLineNo">023</span> * &amp;lt;complexType&amp;gt;<a name="line.23"></a>
+<span class="sourceLineNo">024</span> *   &amp;lt;complexContent&amp;gt;<a name="line.24"></a>
+<span class="sourceLineNo">025</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.25"></a>
+<span class="sourceLineNo">026</span> *       &amp;lt;attribute name="ProductId" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.26"></a>
+<span class="sourceLineNo">027</span> *       &amp;lt;attribute name="ProductLanguage" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="no" /&amp;gt;<a name="line.27"></a>
+<span class="sourceLineNo">028</span> *       &amp;lt;attribute name="ProductVersion" default="Update"&amp;gt;<a name="line.28"></a>
+<span class="sourceLineNo">029</span> *         &amp;lt;simpleType&amp;gt;<a name="line.29"></a>
+<span class="sourceLineNo">030</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> *             &amp;lt;enumeration value="Major"/&amp;gt;<a name="line.31"></a>
+<span class="sourceLineNo">032</span> *             &amp;lt;enumeration value="Minor"/&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *             &amp;lt;enumeration value="Update"/&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *           &amp;lt;/restriction&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *       &amp;lt;/attribute&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *       &amp;lt;attribute name="ProductVersionOperator" default="Equal"&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;simpleType&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *             &amp;lt;enumeration value="Lesser"/&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *             &amp;lt;enumeration value="LesserOrEqual"/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *             &amp;lt;enumeration value="Equal"/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *             &amp;lt;enumeration value="GreaterOrEqual"/&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *             &amp;lt;enumeration value="Greater"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *           &amp;lt;/restriction&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *       &amp;lt;/attribute&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *       &amp;lt;attribute name="UpgradeCode" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *       &amp;lt;attribute name="IgnoreAddExistingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *       &amp;lt;attribute name="IgnoreAddExistingTable" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *       &amp;lt;attribute name="IgnoreDeleteMissingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *       &amp;lt;attribute name="IgnoreDeleteMissingTable" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *       &amp;lt;attribute name="IgnoreUpdateMissingRow" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="yes" /&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *       &amp;lt;attribute name="IgnoreChangingCodePage" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" default="no" /&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *     &amp;lt;/restriction&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> * &amp;lt;/complexType&amp;gt;<a name="line.57"></a>
 <span class="sourceLineNo">058</span> * &lt;/pre&gt;<a name="line.58"></a>
 <span class="sourceLineNo">059</span> * <a name="line.59"></a>
 <span class="sourceLineNo">060</span> * <a name="line.60"></a>

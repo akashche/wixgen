@@ -37,20 +37,20 @@
 <span class="sourceLineNo">029</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.29"></a>
 <span class="sourceLineNo">030</span> * <a name="line.30"></a>
 <span class="sourceLineNo">031</span> * &lt;pre&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> * &amp;lt;complexType&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamily"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyRef"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyGroupRef"/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *       &amp;lt;/choice&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *     &amp;lt;/restriction&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *   &amp;lt;/complexContent&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> * &amp;lt;/complexType&gt;<a name="line.45"></a>
+<span class="sourceLineNo">032</span> * &amp;lt;complexType&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamily"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyRef"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyGroupRef"/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *       &amp;lt;/choice&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *     &amp;lt;/restriction&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> * &amp;lt;/complexType&amp;gt;<a name="line.45"></a>
 <span class="sourceLineNo">046</span> * &lt;/pre&gt;<a name="line.46"></a>
 <span class="sourceLineNo">047</span> * <a name="line.47"></a>
 <span class="sourceLineNo">048</span> * <a name="line.48"></a>
@@ -63,9 +63,9 @@
 <span class="sourceLineNo">055</span>public class PatchFamilyGroup {<a name="line.55"></a>
 <span class="sourceLineNo">056</span><a name="line.56"></a>
 <span class="sourceLineNo">057</span>    @XmlElementRefs({<a name="line.57"></a>
-<span class="sourceLineNo">058</span>        @XmlElementRef(name = "PatchFamilyGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyGroupRef.class),<a name="line.58"></a>
-<span class="sourceLineNo">059</span>        @XmlElementRef(name = "PatchFamily", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamily.class),<a name="line.59"></a>
-<span class="sourceLineNo">060</span>        @XmlElementRef(name = "PatchFamilyRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyRef.class)<a name="line.60"></a>
+<span class="sourceLineNo">058</span>        @XmlElementRef(name = "PatchFamily", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamily.class, required = false),<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        @XmlElementRef(name = "PatchFamilyRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyRef.class, required = false),<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        @XmlElementRef(name = "PatchFamilyGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyGroupRef.class, required = false)<a name="line.60"></a>
 <span class="sourceLineNo">061</span>    })<a name="line.61"></a>
 <span class="sourceLineNo">062</span>    @XmlAnyElement(lax = true)<a name="line.62"></a>
 <span class="sourceLineNo">063</span>    protected List&lt;Object&gt; patchFamilyOrPatchFamilyRefOrPatchFamilyGroupRef;<a name="line.63"></a>
@@ -111,9 +111,9 @@
 <span class="sourceLineNo">103</span>     * &lt;p&gt;<a name="line.103"></a>
 <span class="sourceLineNo">104</span>     * Objects of the following type(s) are allowed in the list<a name="line.104"></a>
 <span class="sourceLineNo">105</span>     * {@link PatchFamilyGroupRef }<a name="line.105"></a>
-<span class="sourceLineNo">106</span>     * {@link PatchFamily }<a name="line.106"></a>
+<span class="sourceLineNo">106</span>     * {@link Element }<a name="line.106"></a>
 <span class="sourceLineNo">107</span>     * {@link Object }<a name="line.107"></a>
-<span class="sourceLineNo">108</span>     * {@link Element }<a name="line.108"></a>
+<span class="sourceLineNo">108</span>     * {@link PatchFamily }<a name="line.108"></a>
 <span class="sourceLineNo">109</span>     * {@link PatchFamilyRef }<a name="line.109"></a>
 <span class="sourceLineNo">110</span>     * <a name="line.110"></a>
 <span class="sourceLineNo">111</span>     * <a name="line.111"></a>

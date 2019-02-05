@@ -31,87 +31,87 @@
 <span class="sourceLineNo">023</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.23"></a>
 <span class="sourceLineNo">024</span> * <a name="line.24"></a>
 <span class="sourceLineNo">025</span> * &lt;pre&gt;<a name="line.25"></a>
-<span class="sourceLineNo">026</span> * &amp;lt;complexType&gt;<a name="line.26"></a>
-<span class="sourceLineNo">027</span> *   &amp;lt;complexContent&gt;<a name="line.27"></a>
-<span class="sourceLineNo">028</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.28"></a>
-<span class="sourceLineNo">029</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.29"></a>
-<span class="sourceLineNo">030</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Custom" maxOccurs="unbounded" minOccurs="0"/&gt;<a name="line.30"></a>
-<span class="sourceLineNo">031</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ScheduleReboot" minOccurs="0"/&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ForceReboot" minOccurs="0"/&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ResolveSource" minOccurs="0"/&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}LaunchConditions" minOccurs="0"/&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FindRelatedProducts" minOccurs="0"/&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AppSearch" minOccurs="0"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CCPSearch"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RMCCPSearch"/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ValidateProductID"/&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CostInitialize"/&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FileCost"/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}IsolateComponents"/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CostFinalize"/&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetODBCFolders"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MigrateFeatureStates"/&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallValidate"/&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallInitialize"/&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AllocateRegistrySpace" minOccurs="0"/&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ProcessComponents"/&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnpublishComponents" minOccurs="0"/&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnpublishFeatures" minOccurs="0"/&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}StopServices"/&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DeleteServices"/&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterComPlus"/&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SelfUnregModules" minOccurs="0"/&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterTypeLibraries" minOccurs="0"/&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveODBC"/&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterFonts"/&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveRegistryValues" minOccurs="0"/&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterClassInfo" minOccurs="0"/&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterExtensionInfo"/&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterProgIdInfo" minOccurs="0"/&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterMIMEInfo"/&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveIniValues"/&gt;<a name="line.64"></a>
-<span class="sourceLineNo">065</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveShortcuts" minOccurs="0"/&gt;<a name="line.65"></a>
-<span class="sourceLineNo">066</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveEnvironmentStrings"/&gt;<a name="line.66"></a>
-<span class="sourceLineNo">067</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveDuplicateFiles"/&gt;<a name="line.67"></a>
-<span class="sourceLineNo">068</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveFiles" minOccurs="0"/&gt;<a name="line.68"></a>
-<span class="sourceLineNo">069</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveFolders" minOccurs="0"/&gt;<a name="line.69"></a>
-<span class="sourceLineNo">070</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CreateFolders" minOccurs="0"/&gt;<a name="line.70"></a>
-<span class="sourceLineNo">071</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MoveFiles"/&gt;<a name="line.71"></a>
-<span class="sourceLineNo">072</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallFiles" minOccurs="0"/&gt;<a name="line.72"></a>
-<span class="sourceLineNo">073</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DuplicateFiles"/&gt;<a name="line.73"></a>
-<span class="sourceLineNo">074</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFiles"/&gt;<a name="line.74"></a>
-<span class="sourceLineNo">075</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BindImage" minOccurs="0"/&gt;<a name="line.75"></a>
-<span class="sourceLineNo">076</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CreateShortcuts" minOccurs="0"/&gt;<a name="line.76"></a>
-<span class="sourceLineNo">077</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterClassInfo" minOccurs="0"/&gt;<a name="line.77"></a>
-<span class="sourceLineNo">078</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterExtensionInfo"/&gt;<a name="line.78"></a>
-<span class="sourceLineNo">079</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterProgIdInfo" minOccurs="0"/&gt;<a name="line.79"></a>
-<span class="sourceLineNo">080</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterMIMEInfo"/&gt;<a name="line.80"></a>
-<span class="sourceLineNo">081</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteRegistryValues" minOccurs="0"/&gt;<a name="line.81"></a>
-<span class="sourceLineNo">082</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteIniValues"/&gt;<a name="line.82"></a>
-<span class="sourceLineNo">083</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteEnvironmentStrings"/&gt;<a name="line.83"></a>
-<span class="sourceLineNo">084</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterFonts"/&gt;<a name="line.84"></a>
-<span class="sourceLineNo">085</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallODBC"/&gt;<a name="line.85"></a>
-<span class="sourceLineNo">086</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterTypeLibraries" minOccurs="0"/&gt;<a name="line.86"></a>
-<span class="sourceLineNo">087</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SelfRegModules" minOccurs="0"/&gt;<a name="line.87"></a>
-<span class="sourceLineNo">088</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterComPlus"/&gt;<a name="line.88"></a>
-<span class="sourceLineNo">089</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallServices"/&gt;<a name="line.89"></a>
-<span class="sourceLineNo">090</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}StartServices"/&gt;<a name="line.90"></a>
-<span class="sourceLineNo">091</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterUser" minOccurs="0"/&gt;<a name="line.91"></a>
-<span class="sourceLineNo">092</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterProduct" minOccurs="0"/&gt;<a name="line.92"></a>
-<span class="sourceLineNo">093</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishComponents" minOccurs="0"/&gt;<a name="line.93"></a>
-<span class="sourceLineNo">094</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishFeatures" minOccurs="0"/&gt;<a name="line.94"></a>
-<span class="sourceLineNo">095</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishProduct" minOccurs="0"/&gt;<a name="line.95"></a>
-<span class="sourceLineNo">096</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallFinalize"/&gt;<a name="line.96"></a>
-<span class="sourceLineNo">097</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveExistingProducts"/&gt;<a name="line.97"></a>
-<span class="sourceLineNo">098</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DisableRollback" minOccurs="0"/&gt;<a name="line.98"></a>
-<span class="sourceLineNo">099</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecute" minOccurs="0"/&gt;<a name="line.99"></a>
-<span class="sourceLineNo">100</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecuteAgain" minOccurs="0"/&gt;<a name="line.100"></a>
-<span class="sourceLineNo">101</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MsiPublishAssemblies"/&gt;<a name="line.101"></a>
-<span class="sourceLineNo">102</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MsiUnpublishAssemblies"/&gt;<a name="line.102"></a>
-<span class="sourceLineNo">103</span> *       &amp;lt;/choice&gt;<a name="line.103"></a>
-<span class="sourceLineNo">104</span> *     &amp;lt;/restriction&gt;<a name="line.104"></a>
-<span class="sourceLineNo">105</span> *   &amp;lt;/complexContent&gt;<a name="line.105"></a>
-<span class="sourceLineNo">106</span> * &amp;lt;/complexType&gt;<a name="line.106"></a>
+<span class="sourceLineNo">026</span> * &amp;lt;complexType&amp;gt;<a name="line.26"></a>
+<span class="sourceLineNo">027</span> *   &amp;lt;complexContent&amp;gt;<a name="line.27"></a>
+<span class="sourceLineNo">028</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.28"></a>
+<span class="sourceLineNo">029</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.29"></a>
+<span class="sourceLineNo">030</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Custom" maxOccurs="unbounded" minOccurs="0"/&amp;gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ScheduleReboot" minOccurs="0"/&amp;gt;<a name="line.31"></a>
+<span class="sourceLineNo">032</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ForceReboot" minOccurs="0"/&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ResolveSource" minOccurs="0"/&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}LaunchConditions" minOccurs="0"/&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FindRelatedProducts" minOccurs="0"/&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AppSearch" minOccurs="0"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CCPSearch"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RMCCPSearch"/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ValidateProductID"/&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CostInitialize"/&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FileCost"/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}IsolateComponents"/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CostFinalize"/&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetODBCFolders"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MigrateFeatureStates"/&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallValidate"/&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallInitialize"/&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AllocateRegistrySpace" minOccurs="0"/&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ProcessComponents"/&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnpublishComponents" minOccurs="0"/&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnpublishFeatures" minOccurs="0"/&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}StopServices"/&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DeleteServices"/&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterComPlus"/&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SelfUnregModules" minOccurs="0"/&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterTypeLibraries" minOccurs="0"/&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveODBC"/&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterFonts"/&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveRegistryValues" minOccurs="0"/&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterClassInfo" minOccurs="0"/&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterExtensionInfo"/&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterProgIdInfo" minOccurs="0"/&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UnregisterMIMEInfo"/&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveIniValues"/&amp;gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveShortcuts" minOccurs="0"/&amp;gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveEnvironmentStrings"/&amp;gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveDuplicateFiles"/&amp;gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveFiles" minOccurs="0"/&amp;gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveFolders" minOccurs="0"/&amp;gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CreateFolders" minOccurs="0"/&amp;gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MoveFiles"/&amp;gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallFiles" minOccurs="0"/&amp;gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DuplicateFiles"/&amp;gt;<a name="line.73"></a>
+<span class="sourceLineNo">074</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFiles"/&amp;gt;<a name="line.74"></a>
+<span class="sourceLineNo">075</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BindImage" minOccurs="0"/&amp;gt;<a name="line.75"></a>
+<span class="sourceLineNo">076</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CreateShortcuts" minOccurs="0"/&amp;gt;<a name="line.76"></a>
+<span class="sourceLineNo">077</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterClassInfo" minOccurs="0"/&amp;gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterExtensionInfo"/&amp;gt;<a name="line.78"></a>
+<span class="sourceLineNo">079</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterProgIdInfo" minOccurs="0"/&amp;gt;<a name="line.79"></a>
+<span class="sourceLineNo">080</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterMIMEInfo"/&amp;gt;<a name="line.80"></a>
+<span class="sourceLineNo">081</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteRegistryValues" minOccurs="0"/&amp;gt;<a name="line.81"></a>
+<span class="sourceLineNo">082</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteIniValues"/&amp;gt;<a name="line.82"></a>
+<span class="sourceLineNo">083</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WriteEnvironmentStrings"/&amp;gt;<a name="line.83"></a>
+<span class="sourceLineNo">084</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterFonts"/&amp;gt;<a name="line.84"></a>
+<span class="sourceLineNo">085</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallODBC"/&amp;gt;<a name="line.85"></a>
+<span class="sourceLineNo">086</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterTypeLibraries" minOccurs="0"/&amp;gt;<a name="line.86"></a>
+<span class="sourceLineNo">087</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SelfRegModules" minOccurs="0"/&amp;gt;<a name="line.87"></a>
+<span class="sourceLineNo">088</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterComPlus"/&amp;gt;<a name="line.88"></a>
+<span class="sourceLineNo">089</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallServices"/&amp;gt;<a name="line.89"></a>
+<span class="sourceLineNo">090</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}StartServices"/&amp;gt;<a name="line.90"></a>
+<span class="sourceLineNo">091</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterUser" minOccurs="0"/&amp;gt;<a name="line.91"></a>
+<span class="sourceLineNo">092</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegisterProduct" minOccurs="0"/&amp;gt;<a name="line.92"></a>
+<span class="sourceLineNo">093</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishComponents" minOccurs="0"/&amp;gt;<a name="line.93"></a>
+<span class="sourceLineNo">094</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishFeatures" minOccurs="0"/&amp;gt;<a name="line.94"></a>
+<span class="sourceLineNo">095</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PublishProduct" minOccurs="0"/&amp;gt;<a name="line.95"></a>
+<span class="sourceLineNo">096</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallFinalize"/&amp;gt;<a name="line.96"></a>
+<span class="sourceLineNo">097</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RemoveExistingProducts"/&amp;gt;<a name="line.97"></a>
+<span class="sourceLineNo">098</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DisableRollback" minOccurs="0"/&amp;gt;<a name="line.98"></a>
+<span class="sourceLineNo">099</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecute" minOccurs="0"/&amp;gt;<a name="line.99"></a>
+<span class="sourceLineNo">100</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecuteAgain" minOccurs="0"/&amp;gt;<a name="line.100"></a>
+<span class="sourceLineNo">101</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MsiPublishAssemblies"/&amp;gt;<a name="line.101"></a>
+<span class="sourceLineNo">102</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MsiUnpublishAssemblies"/&amp;gt;<a name="line.102"></a>
+<span class="sourceLineNo">103</span> *       &amp;lt;/choice&amp;gt;<a name="line.103"></a>
+<span class="sourceLineNo">104</span> *     &amp;lt;/restriction&amp;gt;<a name="line.104"></a>
+<span class="sourceLineNo">105</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.105"></a>
+<span class="sourceLineNo">106</span> * &amp;lt;/complexType&amp;gt;<a name="line.106"></a>
 <span class="sourceLineNo">107</span> * &lt;/pre&gt;<a name="line.107"></a>
 <span class="sourceLineNo">108</span> * <a name="line.108"></a>
 <span class="sourceLineNo">109</span> * <a name="line.109"></a>
@@ -124,79 +124,79 @@
 <span class="sourceLineNo">116</span>public class InstallExecuteSequence {<a name="line.116"></a>
 <span class="sourceLineNo">117</span><a name="line.117"></a>
 <span class="sourceLineNo">118</span>    @XmlElementRefs({<a name="line.118"></a>
-<span class="sourceLineNo">119</span>        @XmlElementRef(name = "RemoveODBC", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.119"></a>
-<span class="sourceLineNo">120</span>        @XmlElementRef(name = "RegisterUser", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.120"></a>
-<span class="sourceLineNo">121</span>        @XmlElementRef(name = "SetODBCFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.121"></a>
-<span class="sourceLineNo">122</span>        @XmlElementRef(name = "CreateFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.122"></a>
-<span class="sourceLineNo">123</span>        @XmlElementRef(name = "RemoveRegistryValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.123"></a>
-<span class="sourceLineNo">124</span>        @XmlElementRef(name = "RegisterExtensionInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.124"></a>
-<span class="sourceLineNo">125</span>        @XmlElementRef(name = "RegisterTypeLibraries", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.125"></a>
-<span class="sourceLineNo">126</span>        @XmlElementRef(name = "PatchFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.126"></a>
-<span class="sourceLineNo">127</span>        @XmlElementRef(name = "SelfRegModules", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.127"></a>
-<span class="sourceLineNo">128</span>        @XmlElementRef(name = "ResolveSource", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.128"></a>
-<span class="sourceLineNo">129</span>        @XmlElementRef(name = "AppSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.129"></a>
-<span class="sourceLineNo">130</span>        @XmlElementRef(name = "Custom", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Custom.class),<a name="line.130"></a>
-<span class="sourceLineNo">131</span>        @XmlElementRef(name = "RegisterComPlus", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.131"></a>
-<span class="sourceLineNo">132</span>        @XmlElementRef(name = "ValidateProductID", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.132"></a>
-<span class="sourceLineNo">133</span>        @XmlElementRef(name = "UnregisterExtensionInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.133"></a>
-<span class="sourceLineNo">134</span>        @XmlElementRef(name = "RemoveEnvironmentStrings", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.134"></a>
-<span class="sourceLineNo">135</span>        @XmlElementRef(name = "PublishFeatures", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.135"></a>
-<span class="sourceLineNo">136</span>        @XmlElementRef(name = "WriteIniValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.136"></a>
-<span class="sourceLineNo">137</span>        @XmlElementRef(name = "UnregisterMIMEInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.137"></a>
-<span class="sourceLineNo">138</span>        @XmlElementRef(name = "ScheduleReboot", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.138"></a>
-<span class="sourceLineNo">139</span>        @XmlElementRef(name = "CreateShortcuts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.139"></a>
-<span class="sourceLineNo">140</span>        @XmlElementRef(name = "CostInitialize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.140"></a>
-<span class="sourceLineNo">141</span>        @XmlElementRef(name = "RegisterMIMEInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.141"></a>
-<span class="sourceLineNo">142</span>        @XmlElementRef(name = "InstallFinalize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.142"></a>
-<span class="sourceLineNo">143</span>        @XmlElementRef(name = "RemoveFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.143"></a>
-<span class="sourceLineNo">144</span>        @XmlElementRef(name = "RemoveIniValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.144"></a>
-<span class="sourceLineNo">145</span>        @XmlElementRef(name = "LaunchConditions", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.145"></a>
-<span class="sourceLineNo">146</span>        @XmlElementRef(name = "RemoveDuplicateFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.146"></a>
-<span class="sourceLineNo">147</span>        @XmlElementRef(name = "InstallValidate", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.147"></a>
-<span class="sourceLineNo">148</span>        @XmlElementRef(name = "RegisterClassInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.148"></a>
-<span class="sourceLineNo">149</span>        @XmlElementRef(name = "MigrateFeatureStates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.149"></a>
-<span class="sourceLineNo">150</span>        @XmlElementRef(name = "RemoveExistingProducts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.150"></a>
-<span class="sourceLineNo">151</span>        @XmlElementRef(name = "InstallServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.151"></a>
-<span class="sourceLineNo">152</span>        @XmlElementRef(name = "StartServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.152"></a>
-<span class="sourceLineNo">153</span>        @XmlElementRef(name = "ProcessComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.153"></a>
-<span class="sourceLineNo">154</span>        @XmlElementRef(name = "RegisterProgIdInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.154"></a>
-<span class="sourceLineNo">155</span>        @XmlElementRef(name = "InstallODBC", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.155"></a>
-<span class="sourceLineNo">156</span>        @XmlElementRef(name = "RemoveFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.156"></a>
-<span class="sourceLineNo">157</span>        @XmlElementRef(name = "FileCost", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.157"></a>
-<span class="sourceLineNo">158</span>        @XmlElementRef(name = "WriteRegistryValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.158"></a>
-<span class="sourceLineNo">159</span>        @XmlElementRef(name = "FindRelatedProducts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.159"></a>
-<span class="sourceLineNo">160</span>        @XmlElementRef(name = "InstallInitialize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.160"></a>
-<span class="sourceLineNo">161</span>        @XmlElementRef(name = "CostFinalize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.161"></a>
-<span class="sourceLineNo">162</span>        @XmlElementRef(name = "UnpublishComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.162"></a>
-<span class="sourceLineNo">163</span>        @XmlElementRef(name = "BindImage", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.163"></a>
-<span class="sourceLineNo">164</span>        @XmlElementRef(name = "UnregisterClassInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.164"></a>
-<span class="sourceLineNo">165</span>        @XmlElementRef(name = "IsolateComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.165"></a>
-<span class="sourceLineNo">166</span>        @XmlElementRef(name = "MoveFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.166"></a>
-<span class="sourceLineNo">167</span>        @XmlElementRef(name = "UnregisterProgIdInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.167"></a>
-<span class="sourceLineNo">168</span>        @XmlElementRef(name = "UnregisterTypeLibraries", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.168"></a>
-<span class="sourceLineNo">169</span>        @XmlElementRef(name = "StopServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.169"></a>
-<span class="sourceLineNo">170</span>        @XmlElementRef(name = "PublishProduct", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.170"></a>
-<span class="sourceLineNo">171</span>        @XmlElementRef(name = "SelfUnregModules", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.171"></a>
-<span class="sourceLineNo">172</span>        @XmlElementRef(name = "DuplicateFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.172"></a>
-<span class="sourceLineNo">173</span>        @XmlElementRef(name = "InstallFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.173"></a>
-<span class="sourceLineNo">174</span>        @XmlElementRef(name = "InstallExecute", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.174"></a>
-<span class="sourceLineNo">175</span>        @XmlElementRef(name = "DeleteServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.175"></a>
-<span class="sourceLineNo">176</span>        @XmlElementRef(name = "InstallExecuteAgain", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.176"></a>
-<span class="sourceLineNo">177</span>        @XmlElementRef(name = "RMCCPSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.177"></a>
-<span class="sourceLineNo">178</span>        @XmlElementRef(name = "CCPSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.178"></a>
-<span class="sourceLineNo">179</span>        @XmlElementRef(name = "UnregisterFonts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.179"></a>
-<span class="sourceLineNo">180</span>        @XmlElementRef(name = "WriteEnvironmentStrings", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.180"></a>
-<span class="sourceLineNo">181</span>        @XmlElementRef(name = "PublishComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.181"></a>
-<span class="sourceLineNo">182</span>        @XmlElementRef(name = "MsiUnpublishAssemblies", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.182"></a>
-<span class="sourceLineNo">183</span>        @XmlElementRef(name = "RemoveShortcuts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.183"></a>
-<span class="sourceLineNo">184</span>        @XmlElementRef(name = "ForceReboot", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.184"></a>
-<span class="sourceLineNo">185</span>        @XmlElementRef(name = "RegisterProduct", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.185"></a>
-<span class="sourceLineNo">186</span>        @XmlElementRef(name = "DisableRollback", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.186"></a>
-<span class="sourceLineNo">187</span>        @XmlElementRef(name = "UnregisterComPlus", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.187"></a>
-<span class="sourceLineNo">188</span>        @XmlElementRef(name = "AllocateRegistrySpace", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.188"></a>
-<span class="sourceLineNo">189</span>        @XmlElementRef(name = "UnpublishFeatures", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.189"></a>
-<span class="sourceLineNo">190</span>        @XmlElementRef(name = "RegisterFonts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class),<a name="line.190"></a>
-<span class="sourceLineNo">191</span>        @XmlElementRef(name = "MsiPublishAssemblies", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class)<a name="line.191"></a>
+<span class="sourceLineNo">119</span>        @XmlElementRef(name = "AllocateRegistrySpace", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.119"></a>
+<span class="sourceLineNo">120</span>        @XmlElementRef(name = "UnpublishFeatures", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.120"></a>
+<span class="sourceLineNo">121</span>        @XmlElementRef(name = "BindImage", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        @XmlElementRef(name = "WriteEnvironmentStrings", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.122"></a>
+<span class="sourceLineNo">123</span>        @XmlElementRef(name = "MsiPublishAssemblies", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.123"></a>
+<span class="sourceLineNo">124</span>        @XmlElementRef(name = "Custom", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Custom.class, required = false),<a name="line.124"></a>
+<span class="sourceLineNo">125</span>        @XmlElementRef(name = "RegisterExtensionInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.125"></a>
+<span class="sourceLineNo">126</span>        @XmlElementRef(name = "RegisterMIMEInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.126"></a>
+<span class="sourceLineNo">127</span>        @XmlElementRef(name = "RegisterFonts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.127"></a>
+<span class="sourceLineNo">128</span>        @XmlElementRef(name = "StartServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        @XmlElementRef(name = "RemoveIniValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.129"></a>
+<span class="sourceLineNo">130</span>        @XmlElementRef(name = "MigrateFeatureStates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.130"></a>
+<span class="sourceLineNo">131</span>        @XmlElementRef(name = "SelfRegModules", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.131"></a>
+<span class="sourceLineNo">132</span>        @XmlElementRef(name = "RemoveDuplicateFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        @XmlElementRef(name = "UnregisterExtensionInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.133"></a>
+<span class="sourceLineNo">134</span>        @XmlElementRef(name = "RegisterProduct", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        @XmlElementRef(name = "PublishFeatures", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        @XmlElementRef(name = "ScheduleReboot", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.136"></a>
+<span class="sourceLineNo">137</span>        @XmlElementRef(name = "RemoveODBC", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.137"></a>
+<span class="sourceLineNo">138</span>        @XmlElementRef(name = "DuplicateFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.138"></a>
+<span class="sourceLineNo">139</span>        @XmlElementRef(name = "WriteRegistryValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        @XmlElementRef(name = "RegisterComPlus", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.140"></a>
+<span class="sourceLineNo">141</span>        @XmlElementRef(name = "CreateShortcuts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.141"></a>
+<span class="sourceLineNo">142</span>        @XmlElementRef(name = "RemoveFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.142"></a>
+<span class="sourceLineNo">143</span>        @XmlElementRef(name = "RegisterClassInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.143"></a>
+<span class="sourceLineNo">144</span>        @XmlElementRef(name = "InstallFinalize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        @XmlElementRef(name = "SelfUnregModules", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.145"></a>
+<span class="sourceLineNo">146</span>        @XmlElementRef(name = "InstallFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.146"></a>
+<span class="sourceLineNo">147</span>        @XmlElementRef(name = "ValidateProductID", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.147"></a>
+<span class="sourceLineNo">148</span>        @XmlElementRef(name = "DisableRollback", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.148"></a>
+<span class="sourceLineNo">149</span>        @XmlElementRef(name = "PatchFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        @XmlElementRef(name = "CreateFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.150"></a>
+<span class="sourceLineNo">151</span>        @XmlElementRef(name = "UnregisterClassInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        @XmlElementRef(name = "ResolveSource", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.152"></a>
+<span class="sourceLineNo">153</span>        @XmlElementRef(name = "UnregisterMIMEInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.153"></a>
+<span class="sourceLineNo">154</span>        @XmlElementRef(name = "RemoveEnvironmentStrings", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.154"></a>
+<span class="sourceLineNo">155</span>        @XmlElementRef(name = "UnpublishComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.155"></a>
+<span class="sourceLineNo">156</span>        @XmlElementRef(name = "RMCCPSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        @XmlElementRef(name = "UnregisterProgIdInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.157"></a>
+<span class="sourceLineNo">158</span>        @XmlElementRef(name = "FileCost", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.158"></a>
+<span class="sourceLineNo">159</span>        @XmlElementRef(name = "SetODBCFolders", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.159"></a>
+<span class="sourceLineNo">160</span>        @XmlElementRef(name = "WriteIniValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        @XmlElementRef(name = "RemoveShortcuts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.161"></a>
+<span class="sourceLineNo">162</span>        @XmlElementRef(name = "InstallODBC", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        @XmlElementRef(name = "RemoveFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        @XmlElementRef(name = "InstallInitialize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.164"></a>
+<span class="sourceLineNo">165</span>        @XmlElementRef(name = "MsiUnpublishAssemblies", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.165"></a>
+<span class="sourceLineNo">166</span>        @XmlElementRef(name = "RegisterUser", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.166"></a>
+<span class="sourceLineNo">167</span>        @XmlElementRef(name = "PublishProduct", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.167"></a>
+<span class="sourceLineNo">168</span>        @XmlElementRef(name = "DeleteServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.168"></a>
+<span class="sourceLineNo">169</span>        @XmlElementRef(name = "InstallValidate", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.169"></a>
+<span class="sourceLineNo">170</span>        @XmlElementRef(name = "MoveFiles", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        @XmlElementRef(name = "RegisterTypeLibraries", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.171"></a>
+<span class="sourceLineNo">172</span>        @XmlElementRef(name = "PublishComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        @XmlElementRef(name = "UnregisterFonts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.173"></a>
+<span class="sourceLineNo">174</span>        @XmlElementRef(name = "IsolateComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.174"></a>
+<span class="sourceLineNo">175</span>        @XmlElementRef(name = "RegisterProgIdInfo", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.175"></a>
+<span class="sourceLineNo">176</span>        @XmlElementRef(name = "FindRelatedProducts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.176"></a>
+<span class="sourceLineNo">177</span>        @XmlElementRef(name = "CostInitialize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.177"></a>
+<span class="sourceLineNo">178</span>        @XmlElementRef(name = "RemoveExistingProducts", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        @XmlElementRef(name = "UnregisterTypeLibraries", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.179"></a>
+<span class="sourceLineNo">180</span>        @XmlElementRef(name = "LaunchConditions", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        @XmlElementRef(name = "ForceReboot", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.181"></a>
+<span class="sourceLineNo">182</span>        @XmlElementRef(name = "InstallExecute", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.182"></a>
+<span class="sourceLineNo">183</span>        @XmlElementRef(name = "CostFinalize", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.183"></a>
+<span class="sourceLineNo">184</span>        @XmlElementRef(name = "CCPSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.184"></a>
+<span class="sourceLineNo">185</span>        @XmlElementRef(name = "InstallServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.185"></a>
+<span class="sourceLineNo">186</span>        @XmlElementRef(name = "InstallExecuteAgain", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.186"></a>
+<span class="sourceLineNo">187</span>        @XmlElementRef(name = "AppSearch", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.187"></a>
+<span class="sourceLineNo">188</span>        @XmlElementRef(name = "RemoveRegistryValues", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.188"></a>
+<span class="sourceLineNo">189</span>        @XmlElementRef(name = "UnregisterComPlus", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.189"></a>
+<span class="sourceLineNo">190</span>        @XmlElementRef(name = "StopServices", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false),<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        @XmlElementRef(name = "ProcessComponents", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = JAXBElement.class, required = false)<a name="line.191"></a>
 <span class="sourceLineNo">192</span>    })<a name="line.192"></a>
 <span class="sourceLineNo">193</span>    protected List&lt;Object&gt; customOrScheduleRebootOrForceReboot;<a name="line.193"></a>
 <span class="sourceLineNo">194</span><a name="line.194"></a>
@@ -239,31 +239,31 @@
 <span class="sourceLineNo">231</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.231"></a>
 <span class="sourceLineNo">232</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.232"></a>
 <span class="sourceLineNo">233</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.233"></a>
-<span class="sourceLineNo">234</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.234"></a>
+<span class="sourceLineNo">234</span>     * {@link Custom }<a name="line.234"></a>
 <span class="sourceLineNo">235</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.235"></a>
 <span class="sourceLineNo">236</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.236"></a>
 <span class="sourceLineNo">237</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.237"></a>
-<span class="sourceLineNo">238</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.238"></a>
-<span class="sourceLineNo">239</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.239"></a>
-<span class="sourceLineNo">240</span>     * {@link Custom }<a name="line.240"></a>
+<span class="sourceLineNo">238</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.238"></a>
+<span class="sourceLineNo">239</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.239"></a>
+<span class="sourceLineNo">240</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.240"></a>
 <span class="sourceLineNo">241</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.241"></a>
 <span class="sourceLineNo">242</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.242"></a>
 <span class="sourceLineNo">243</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.243"></a>
 <span class="sourceLineNo">244</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.244"></a>
 <span class="sourceLineNo">245</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.245"></a>
-<span class="sourceLineNo">246</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.246"></a>
+<span class="sourceLineNo">246</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.246"></a>
 <span class="sourceLineNo">247</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.247"></a>
-<span class="sourceLineNo">248</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.248"></a>
+<span class="sourceLineNo">248</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.248"></a>
 <span class="sourceLineNo">249</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.249"></a>
 <span class="sourceLineNo">250</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.250"></a>
 <span class="sourceLineNo">251</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.251"></a>
 <span class="sourceLineNo">252</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.252"></a>
 <span class="sourceLineNo">253</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.253"></a>
 <span class="sourceLineNo">254</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.254"></a>
-<span class="sourceLineNo">255</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.255"></a>
+<span class="sourceLineNo">255</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.255"></a>
 <span class="sourceLineNo">256</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.256"></a>
 <span class="sourceLineNo">257</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.257"></a>
-<span class="sourceLineNo">258</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.258"></a>
+<span class="sourceLineNo">258</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.258"></a>
 <span class="sourceLineNo">259</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.259"></a>
 <span class="sourceLineNo">260</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.260"></a>
 <span class="sourceLineNo">261</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.261"></a>
@@ -271,10 +271,10 @@
 <span class="sourceLineNo">263</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.263"></a>
 <span class="sourceLineNo">264</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.264"></a>
 <span class="sourceLineNo">265</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.265"></a>
-<span class="sourceLineNo">266</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.266"></a>
+<span class="sourceLineNo">266</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.266"></a>
 <span class="sourceLineNo">267</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.267"></a>
 <span class="sourceLineNo">268</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.268"></a>
-<span class="sourceLineNo">269</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.269"></a>
+<span class="sourceLineNo">269</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.269"></a>
 <span class="sourceLineNo">270</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.270"></a>
 <span class="sourceLineNo">271</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.271"></a>
 <span class="sourceLineNo">272</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.272"></a>
@@ -289,20 +289,20 @@
 <span class="sourceLineNo">281</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.281"></a>
 <span class="sourceLineNo">282</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.282"></a>
 <span class="sourceLineNo">283</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.283"></a>
-<span class="sourceLineNo">284</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.284"></a>
-<span class="sourceLineNo">285</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.285"></a>
-<span class="sourceLineNo">286</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.286"></a>
-<span class="sourceLineNo">287</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.287"></a>
-<span class="sourceLineNo">288</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.288"></a>
+<span class="sourceLineNo">284</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.284"></a>
+<span class="sourceLineNo">285</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.285"></a>
+<span class="sourceLineNo">286</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.286"></a>
+<span class="sourceLineNo">287</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.287"></a>
+<span class="sourceLineNo">288</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.288"></a>
 <span class="sourceLineNo">289</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.289"></a>
-<span class="sourceLineNo">290</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.290"></a>
-<span class="sourceLineNo">291</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.291"></a>
+<span class="sourceLineNo">290</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.290"></a>
+<span class="sourceLineNo">291</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.291"></a>
 <span class="sourceLineNo">292</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.292"></a>
 <span class="sourceLineNo">293</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.293"></a>
 <span class="sourceLineNo">294</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.294"></a>
 <span class="sourceLineNo">295</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.295"></a>
 <span class="sourceLineNo">296</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.296"></a>
-<span class="sourceLineNo">297</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.297"></a>
+<span class="sourceLineNo">297</span>     * {@link JAXBElement }{@code &lt;}{@link ActionModuleSequenceType }{@code &gt;}<a name="line.297"></a>
 <span class="sourceLineNo">298</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.298"></a>
 <span class="sourceLineNo">299</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.299"></a>
 <span class="sourceLineNo">300</span>     * {@link JAXBElement }{@code &lt;}{@link ActionSequenceType }{@code &gt;}<a name="line.300"></a>

@@ -37,49 +37,49 @@
 <span class="sourceLineNo">029</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.29"></a>
 <span class="sourceLineNo">030</span> * <a name="line.30"></a>
 <span class="sourceLineNo">031</span> * &lt;pre&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> * &amp;lt;complexType&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ApprovedExeForElevation" maxOccurs="unbounded" minOccurs="0"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Log" minOccurs="0"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Catalog" maxOccurs="unbounded" minOccurs="0"/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplication" minOccurs="0"/&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplicationRef" minOccurs="0"/&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}OptionalUpdateRegistration" minOccurs="0"/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Chain"/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Container"/&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ContainerRef"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroup"/&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroupRef"/&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RelatedBundle"/&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Update"/&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Variable"/&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WixVariable"/&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *       &amp;lt;/choice&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *       &amp;lt;attribute name="AboutUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *       &amp;lt;attribute name="Copyright" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *       &amp;lt;attribute name="Compressed" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoDefaultTypeUnion" /&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="DisableModify" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoButtonTypeUnion" /&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="DisableRemove" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="DisableRepair" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="HelpTelephone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *       &amp;lt;attribute name="HelpUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *       &amp;lt;attribute name="IconSourceFile" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *       &amp;lt;attribute name="Manufacturer" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *       &amp;lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> *       &amp;lt;attribute name="ParentName" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.64"></a>
-<span class="sourceLineNo">065</span> *       &amp;lt;attribute name="SplashScreenSourceFile" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.65"></a>
-<span class="sourceLineNo">066</span> *       &amp;lt;attribute name="Tag" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.66"></a>
-<span class="sourceLineNo">067</span> *       &amp;lt;attribute name="UpdateUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.67"></a>
-<span class="sourceLineNo">068</span> *       &amp;lt;attribute name="UpgradeCode" use="required" type="{http://schemas.microsoft.com/wix/2006/wi}Guid" /&gt;<a name="line.68"></a>
-<span class="sourceLineNo">069</span> *       &amp;lt;attribute name="Version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.69"></a>
-<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="Condition" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.70"></a>
-<span class="sourceLineNo">071</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&gt;<a name="line.71"></a>
-<span class="sourceLineNo">072</span> *     &amp;lt;/restriction&gt;<a name="line.72"></a>
-<span class="sourceLineNo">073</span> *   &amp;lt;/complexContent&gt;<a name="line.73"></a>
-<span class="sourceLineNo">074</span> * &amp;lt;/complexType&gt;<a name="line.74"></a>
+<span class="sourceLineNo">032</span> * &amp;lt;complexType&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ApprovedExeForElevation" maxOccurs="unbounded" minOccurs="0"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Log" minOccurs="0"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Catalog" maxOccurs="unbounded" minOccurs="0"/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplication" minOccurs="0"/&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplicationRef" minOccurs="0"/&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}OptionalUpdateRegistration" minOccurs="0"/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Chain"/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Container"/&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ContainerRef"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroup"/&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroupRef"/&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RelatedBundle"/&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Update"/&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Variable"/&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WixVariable"/&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *       &amp;lt;/choice&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *       &amp;lt;attribute name="AboutUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *       &amp;lt;attribute name="Copyright" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *       &amp;lt;attribute name="Compressed" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoDefaultTypeUnion" /&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="DisableModify" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoButtonTypeUnion" /&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="DisableRemove" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="DisableRepair" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="HelpTelephone" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *       &amp;lt;attribute name="HelpUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *       &amp;lt;attribute name="IconSourceFile" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *       &amp;lt;attribute name="Manufacturer" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *       &amp;lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> *       &amp;lt;attribute name="ParentName" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> *       &amp;lt;attribute name="SplashScreenSourceFile" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span> *       &amp;lt;attribute name="Tag" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> *       &amp;lt;attribute name="UpdateUrl" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> *       &amp;lt;attribute name="UpgradeCode" use="required" type="{http://schemas.microsoft.com/wix/2006/wi}Guid" /&amp;gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> *       &amp;lt;attribute name="Version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="Condition" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&amp;gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> *     &amp;lt;/restriction&amp;gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.73"></a>
+<span class="sourceLineNo">074</span> * &amp;lt;/complexType&amp;gt;<a name="line.74"></a>
 <span class="sourceLineNo">075</span> * &lt;/pre&gt;<a name="line.75"></a>
 <span class="sourceLineNo">076</span> * <a name="line.76"></a>
 <span class="sourceLineNo">077</span> * <a name="line.77"></a>
@@ -92,21 +92,21 @@
 <span class="sourceLineNo">084</span>public class Bundle {<a name="line.84"></a>
 <span class="sourceLineNo">085</span><a name="line.85"></a>
 <span class="sourceLineNo">086</span>    @XmlElementRefs({<a name="line.86"></a>
-<span class="sourceLineNo">087</span>        @XmlElementRef(name = "Chain", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Chain.class),<a name="line.87"></a>
-<span class="sourceLineNo">088</span>        @XmlElementRef(name = "Container", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Container.class),<a name="line.88"></a>
-<span class="sourceLineNo">089</span>        @XmlElementRef(name = "ApprovedExeForElevation", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ApprovedExeForElevation.class),<a name="line.89"></a>
-<span class="sourceLineNo">090</span>        @XmlElementRef(name = "OptionalUpdateRegistration", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = OptionalUpdateRegistration.class),<a name="line.90"></a>
-<span class="sourceLineNo">091</span>        @XmlElementRef(name = "WixVariable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = WixVariable.class),<a name="line.91"></a>
-<span class="sourceLineNo">092</span>        @XmlElementRef(name = "Log", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Log.class),<a name="line.92"></a>
-<span class="sourceLineNo">093</span>        @XmlElementRef(name = "Variable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Variable.class),<a name="line.93"></a>
-<span class="sourceLineNo">094</span>        @XmlElementRef(name = "Update", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Update.class),<a name="line.94"></a>
-<span class="sourceLineNo">095</span>        @XmlElementRef(name = "BootstrapperApplicationRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplicationRef.class),<a name="line.95"></a>
-<span class="sourceLineNo">096</span>        @XmlElementRef(name = "BootstrapperApplication", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplication.class),<a name="line.96"></a>
-<span class="sourceLineNo">097</span>        @XmlElementRef(name = "Catalog", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Catalog.class),<a name="line.97"></a>
-<span class="sourceLineNo">098</span>        @XmlElementRef(name = "RelatedBundle", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RelatedBundle.class),<a name="line.98"></a>
-<span class="sourceLineNo">099</span>        @XmlElementRef(name = "PayloadGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroup.class),<a name="line.99"></a>
-<span class="sourceLineNo">100</span>        @XmlElementRef(name = "ContainerRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ContainerRef.class),<a name="line.100"></a>
-<span class="sourceLineNo">101</span>        @XmlElementRef(name = "PayloadGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroupRef.class)<a name="line.101"></a>
+<span class="sourceLineNo">087</span>        @XmlElementRef(name = "Log", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Log.class, required = false),<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        @XmlElementRef(name = "OptionalUpdateRegistration", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = OptionalUpdateRegistration.class, required = false),<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        @XmlElementRef(name = "ContainerRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ContainerRef.class, required = false),<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        @XmlElementRef(name = "WixVariable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = WixVariable.class, required = false),<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        @XmlElementRef(name = "PayloadGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroup.class, required = false),<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        @XmlElementRef(name = "ApprovedExeForElevation", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ApprovedExeForElevation.class, required = false),<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        @XmlElementRef(name = "Container", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Container.class, required = false),<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        @XmlElementRef(name = "RelatedBundle", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RelatedBundle.class, required = false),<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        @XmlElementRef(name = "Update", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Update.class, required = false),<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        @XmlElementRef(name = "Chain", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Chain.class, required = false),<a name="line.96"></a>
+<span class="sourceLineNo">097</span>        @XmlElementRef(name = "Variable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Variable.class, required = false),<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        @XmlElementRef(name = "BootstrapperApplicationRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplicationRef.class, required = false),<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        @XmlElementRef(name = "PayloadGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroupRef.class, required = false),<a name="line.99"></a>
+<span class="sourceLineNo">100</span>        @XmlElementRef(name = "Catalog", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Catalog.class, required = false),<a name="line.100"></a>
+<span class="sourceLineNo">101</span>        @XmlElementRef(name = "BootstrapperApplication", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplication.class, required = false)<a name="line.101"></a>
 <span class="sourceLineNo">102</span>    })<a name="line.102"></a>
 <span class="sourceLineNo">103</span>    @XmlAnyElement(lax = true)<a name="line.103"></a>
 <span class="sourceLineNo">104</span>    protected List&lt;Object&gt; approvedExeForElevationOrLogOrCatalog;<a name="line.104"></a>
@@ -202,23 +202,23 @@
 <span class="sourceLineNo">194</span>     * <a name="line.194"></a>
 <span class="sourceLineNo">195</span>     * &lt;p&gt;<a name="line.195"></a>
 <span class="sourceLineNo">196</span>     * Objects of the following type(s) are allowed in the list<a name="line.196"></a>
-<span class="sourceLineNo">197</span>     * {@link Chain }<a name="line.197"></a>
-<span class="sourceLineNo">198</span>     * {@link Container }<a name="line.198"></a>
-<span class="sourceLineNo">199</span>     * {@link ApprovedExeForElevation }<a name="line.199"></a>
-<span class="sourceLineNo">200</span>     * {@link OptionalUpdateRegistration }<a name="line.200"></a>
-<span class="sourceLineNo">201</span>     * {@link WixVariable }<a name="line.201"></a>
-<span class="sourceLineNo">202</span>     * {@link Object }<a name="line.202"></a>
-<span class="sourceLineNo">203</span>     * {@link Log }<a name="line.203"></a>
-<span class="sourceLineNo">204</span>     * {@link Variable }<a name="line.204"></a>
-<span class="sourceLineNo">205</span>     * {@link Update }<a name="line.205"></a>
-<span class="sourceLineNo">206</span>     * {@link BootstrapperApplicationRef }<a name="line.206"></a>
-<span class="sourceLineNo">207</span>     * {@link BootstrapperApplication }<a name="line.207"></a>
-<span class="sourceLineNo">208</span>     * {@link Catalog }<a name="line.208"></a>
-<span class="sourceLineNo">209</span>     * {@link RelatedBundle }<a name="line.209"></a>
-<span class="sourceLineNo">210</span>     * {@link ContainerRef }<a name="line.210"></a>
-<span class="sourceLineNo">211</span>     * {@link PayloadGroup }<a name="line.211"></a>
-<span class="sourceLineNo">212</span>     * {@link PayloadGroupRef }<a name="line.212"></a>
-<span class="sourceLineNo">213</span>     * {@link Element }<a name="line.213"></a>
+<span class="sourceLineNo">197</span>     * {@link Log }<a name="line.197"></a>
+<span class="sourceLineNo">198</span>     * {@link OptionalUpdateRegistration }<a name="line.198"></a>
+<span class="sourceLineNo">199</span>     * {@link ContainerRef }<a name="line.199"></a>
+<span class="sourceLineNo">200</span>     * {@link WixVariable }<a name="line.200"></a>
+<span class="sourceLineNo">201</span>     * {@link Element }<a name="line.201"></a>
+<span class="sourceLineNo">202</span>     * {@link PayloadGroup }<a name="line.202"></a>
+<span class="sourceLineNo">203</span>     * {@link ApprovedExeForElevation }<a name="line.203"></a>
+<span class="sourceLineNo">204</span>     * {@link Container }<a name="line.204"></a>
+<span class="sourceLineNo">205</span>     * {@link RelatedBundle }<a name="line.205"></a>
+<span class="sourceLineNo">206</span>     * {@link Update }<a name="line.206"></a>
+<span class="sourceLineNo">207</span>     * {@link Chain }<a name="line.207"></a>
+<span class="sourceLineNo">208</span>     * {@link Variable }<a name="line.208"></a>
+<span class="sourceLineNo">209</span>     * {@link BootstrapperApplicationRef }<a name="line.209"></a>
+<span class="sourceLineNo">210</span>     * {@link PayloadGroupRef }<a name="line.210"></a>
+<span class="sourceLineNo">211</span>     * {@link Catalog }<a name="line.211"></a>
+<span class="sourceLineNo">212</span>     * {@link BootstrapperApplication }<a name="line.212"></a>
+<span class="sourceLineNo">213</span>     * {@link Object }<a name="line.213"></a>
 <span class="sourceLineNo">214</span>     * <a name="line.214"></a>
 <span class="sourceLineNo">215</span>     * <a name="line.215"></a>
 <span class="sourceLineNo">216</span>     */<a name="line.216"></a>

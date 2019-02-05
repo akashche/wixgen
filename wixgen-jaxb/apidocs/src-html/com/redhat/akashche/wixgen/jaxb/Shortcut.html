@@ -34,42 +34,42 @@
 <span class="sourceLineNo">026</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.26"></a>
 <span class="sourceLineNo">027</span> * <a name="line.27"></a>
 <span class="sourceLineNo">028</span> * &lt;pre&gt;<a name="line.28"></a>
-<span class="sourceLineNo">029</span> * &amp;lt;complexType&gt;<a name="line.29"></a>
-<span class="sourceLineNo">030</span> *   &amp;lt;complexContent&gt;<a name="line.30"></a>
-<span class="sourceLineNo">031</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Icon" minOccurs="0"/&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ShortcutProperty" minOccurs="0"/&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *       &amp;lt;/choice&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *       &amp;lt;attribute name="Directory" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *       &amp;lt;attribute name="Name" use="required" type="{http://schemas.microsoft.com/wix/2006/wi}LongFileNameType" /&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *       &amp;lt;attribute name="LongName" type="{http://schemas.microsoft.com/wix/2006/wi}LongFileNameType" /&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="ShortName" type="{http://schemas.microsoft.com/wix/2006/wi}ShortFileNameType" /&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *       &amp;lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *       &amp;lt;attribute name="Arguments" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *       &amp;lt;attribute name="Hotkey" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *       &amp;lt;attribute name="Icon" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *       &amp;lt;attribute name="IconIndex" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *       &amp;lt;attribute name="Show"&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *         &amp;lt;simpleType&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *             &amp;lt;enumeration value="normal"/&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *             &amp;lt;enumeration value="minimized"/&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *             &amp;lt;enumeration value="maximized"/&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *           &amp;lt;/restriction&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *         &amp;lt;/simpleType&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *       &amp;lt;/attribute&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="WorkingDirectory" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="Advertise" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="DisplayResourceDll" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="DisplayResourceId" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *       &amp;lt;attribute name="DescriptionResourceDll" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *       &amp;lt;attribute name="DescriptionResourceId" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *     &amp;lt;/restriction&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *   &amp;lt;/complexContent&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> * &amp;lt;/complexType&gt;<a name="line.64"></a>
+<span class="sourceLineNo">029</span> * &amp;lt;complexType&amp;gt;<a name="line.29"></a>
+<span class="sourceLineNo">030</span> *   &amp;lt;complexContent&amp;gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.31"></a>
+<span class="sourceLineNo">032</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Icon" minOccurs="0"/&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ShortcutProperty" minOccurs="0"/&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *       &amp;lt;/choice&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *       &amp;lt;attribute name="Directory" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *       &amp;lt;attribute name="Name" use="required" type="{http://schemas.microsoft.com/wix/2006/wi}LongFileNameType" /&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *       &amp;lt;attribute name="LongName" type="{http://schemas.microsoft.com/wix/2006/wi}LongFileNameType" /&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="ShortName" type="{http://schemas.microsoft.com/wix/2006/wi}ShortFileNameType" /&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *       &amp;lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *       &amp;lt;attribute name="Arguments" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *       &amp;lt;attribute name="Hotkey" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *       &amp;lt;attribute name="Icon" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *       &amp;lt;attribute name="IconIndex" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *       &amp;lt;attribute name="Show"&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *         &amp;lt;simpleType&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *             &amp;lt;enumeration value="normal"/&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *             &amp;lt;enumeration value="minimized"/&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *             &amp;lt;enumeration value="maximized"/&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *           &amp;lt;/restriction&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *       &amp;lt;/attribute&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="WorkingDirectory" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="Advertise" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="DisplayResourceDll" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="DisplayResourceId" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *       &amp;lt;attribute name="DescriptionResourceDll" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *       &amp;lt;attribute name="DescriptionResourceId" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *     &amp;lt;/restriction&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> * &amp;lt;/complexType&amp;gt;<a name="line.64"></a>
 <span class="sourceLineNo">065</span> * &lt;/pre&gt;<a name="line.65"></a>
 <span class="sourceLineNo">066</span> * <a name="line.66"></a>
 <span class="sourceLineNo">067</span> * <a name="line.67"></a>

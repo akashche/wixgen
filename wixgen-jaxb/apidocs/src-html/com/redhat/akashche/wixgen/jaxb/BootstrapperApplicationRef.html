@@ -37,19 +37,19 @@
 <span class="sourceLineNo">029</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.29"></a>
 <span class="sourceLineNo">030</span> * <a name="line.30"></a>
 <span class="sourceLineNo">031</span> * &lt;pre&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> * &amp;lt;complexType&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Payload"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroupRef"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *       &amp;lt;/choice&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *     &amp;lt;/restriction&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *   &amp;lt;/complexContent&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> * &amp;lt;/complexType&gt;<a name="line.44"></a>
+<span class="sourceLineNo">032</span> * &amp;lt;complexType&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *   &amp;lt;complexContent&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Payload"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroupRef"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *       &amp;lt;/choice&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *     &amp;lt;/restriction&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> * &amp;lt;/complexType&amp;gt;<a name="line.44"></a>
 <span class="sourceLineNo">045</span> * &lt;/pre&gt;<a name="line.45"></a>
 <span class="sourceLineNo">046</span> * <a name="line.46"></a>
 <span class="sourceLineNo">047</span> * <a name="line.47"></a>
@@ -62,8 +62,8 @@
 <span class="sourceLineNo">054</span>public class BootstrapperApplicationRef {<a name="line.54"></a>
 <span class="sourceLineNo">055</span><a name="line.55"></a>
 <span class="sourceLineNo">056</span>    @XmlElementRefs({<a name="line.56"></a>
-<span class="sourceLineNo">057</span>        @XmlElementRef(name = "PayloadGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroupRef.class),<a name="line.57"></a>
-<span class="sourceLineNo">058</span>        @XmlElementRef(name = "Payload", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Payload.class)<a name="line.58"></a>
+<span class="sourceLineNo">057</span>        @XmlElementRef(name = "Payload", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Payload.class, required = false),<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        @XmlElementRef(name = "PayloadGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroupRef.class, required = false)<a name="line.58"></a>
 <span class="sourceLineNo">059</span>    })<a name="line.59"></a>
 <span class="sourceLineNo">060</span>    @XmlAnyElement(lax = true)<a name="line.60"></a>
 <span class="sourceLineNo">061</span>    protected List&lt;Object&gt; payloadOrPayloadGroupRefOrAny;<a name="line.61"></a>
@@ -109,9 +109,9 @@
 <span class="sourceLineNo">101</span>     * &lt;p&gt;<a name="line.101"></a>
 <span class="sourceLineNo">102</span>     * Objects of the following type(s) are allowed in the list<a name="line.102"></a>
 <span class="sourceLineNo">103</span>     * {@link PayloadGroupRef }<a name="line.103"></a>
-<span class="sourceLineNo">104</span>     * {@link Object }<a name="line.104"></a>
-<span class="sourceLineNo">105</span>     * {@link Payload }<a name="line.105"></a>
-<span class="sourceLineNo">106</span>     * {@link Element }<a name="line.106"></a>
+<span class="sourceLineNo">104</span>     * {@link Payload }<a name="line.104"></a>
+<span class="sourceLineNo">105</span>     * {@link Element }<a name="line.105"></a>
+<span class="sourceLineNo">106</span>     * {@link Object }<a name="line.106"></a>
 <span class="sourceLineNo">107</span>     * <a name="line.107"></a>
 <span class="sourceLineNo">108</span>     * <a name="line.108"></a>
 <span class="sourceLineNo">109</span>     */<a name="line.109"></a>

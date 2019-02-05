@@ -40,64 +40,64 @@
 <span class="sourceLineNo">032</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.32"></a>
 <span class="sourceLineNo">033</span> * <a name="line.33"></a>
 <span class="sourceLineNo">034</span> * &lt;pre&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> * &amp;lt;complexType&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *   &amp;lt;complexContent&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Component"/&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentGroupRef"/&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentRef"/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Condition"/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Feature"/&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureGroupRef"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureRef"/&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MergeRef"/&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *       &amp;lt;/choice&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *       &amp;lt;attribute name="Absent"&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *         &amp;lt;simpleType&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *             &amp;lt;enumeration value="allow"/&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *             &amp;lt;enumeration value="disallow"/&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *           &amp;lt;/restriction&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *         &amp;lt;/simpleType&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *       &amp;lt;/attribute&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="AllowAdvertise"&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *         &amp;lt;simpleType&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *             &amp;lt;enumeration value="no"/&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *             &amp;lt;enumeration value="system"/&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *             &amp;lt;enumeration value="yes"/&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> *           &amp;lt;/restriction&gt;<a name="line.64"></a>
-<span class="sourceLineNo">065</span> *         &amp;lt;/simpleType&gt;<a name="line.65"></a>
-<span class="sourceLineNo">066</span> *       &amp;lt;/attribute&gt;<a name="line.66"></a>
-<span class="sourceLineNo">067</span> *       &amp;lt;attribute name="ConfigurableDirectory" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.67"></a>
-<span class="sourceLineNo">068</span> *       &amp;lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.68"></a>
-<span class="sourceLineNo">069</span> *       &amp;lt;attribute name="Display" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.69"></a>
-<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="InstallDefault"&gt;<a name="line.70"></a>
-<span class="sourceLineNo">071</span> *         &amp;lt;simpleType&gt;<a name="line.71"></a>
-<span class="sourceLineNo">072</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.72"></a>
-<span class="sourceLineNo">073</span> *             &amp;lt;enumeration value="followParent"/&gt;<a name="line.73"></a>
-<span class="sourceLineNo">074</span> *             &amp;lt;enumeration value="local"/&gt;<a name="line.74"></a>
-<span class="sourceLineNo">075</span> *             &amp;lt;enumeration value="source"/&gt;<a name="line.75"></a>
-<span class="sourceLineNo">076</span> *           &amp;lt;/restriction&gt;<a name="line.76"></a>
-<span class="sourceLineNo">077</span> *         &amp;lt;/simpleType&gt;<a name="line.77"></a>
-<span class="sourceLineNo">078</span> *       &amp;lt;/attribute&gt;<a name="line.78"></a>
-<span class="sourceLineNo">079</span> *       &amp;lt;attribute name="Level" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;<a name="line.79"></a>
-<span class="sourceLineNo">080</span> *       &amp;lt;attribute name="Title" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.80"></a>
-<span class="sourceLineNo">081</span> *       &amp;lt;attribute name="TypicalDefault"&gt;<a name="line.81"></a>
-<span class="sourceLineNo">082</span> *         &amp;lt;simpleType&gt;<a name="line.82"></a>
-<span class="sourceLineNo">083</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.83"></a>
-<span class="sourceLineNo">084</span> *             &amp;lt;enumeration value="advertise"/&gt;<a name="line.84"></a>
-<span class="sourceLineNo">085</span> *             &amp;lt;enumeration value="install"/&gt;<a name="line.85"></a>
-<span class="sourceLineNo">086</span> *           &amp;lt;/restriction&gt;<a name="line.86"></a>
-<span class="sourceLineNo">087</span> *         &amp;lt;/simpleType&gt;<a name="line.87"></a>
-<span class="sourceLineNo">088</span> *       &amp;lt;/attribute&gt;<a name="line.88"></a>
-<span class="sourceLineNo">089</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&gt;<a name="line.89"></a>
-<span class="sourceLineNo">090</span> *     &amp;lt;/restriction&gt;<a name="line.90"></a>
-<span class="sourceLineNo">091</span> *   &amp;lt;/complexContent&gt;<a name="line.91"></a>
-<span class="sourceLineNo">092</span> * &amp;lt;/complexType&gt;<a name="line.92"></a>
+<span class="sourceLineNo">035</span> * &amp;lt;complexType&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *   &amp;lt;complexContent&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Component"/&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentGroupRef"/&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentRef"/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Condition"/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Feature"/&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureGroupRef"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureRef"/&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MergeRef"/&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *       &amp;lt;/choice&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *       &amp;lt;attribute name="Id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *       &amp;lt;attribute name="Absent"&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *         &amp;lt;simpleType&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *             &amp;lt;enumeration value="allow"/&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *             &amp;lt;enumeration value="disallow"/&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *           &amp;lt;/restriction&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *       &amp;lt;/attribute&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="AllowAdvertise"&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *         &amp;lt;simpleType&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *             &amp;lt;enumeration value="no"/&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *             &amp;lt;enumeration value="system"/&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *             &amp;lt;enumeration value="yes"/&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> *           &amp;lt;/restriction&amp;gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span> *       &amp;lt;/attribute&amp;gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> *       &amp;lt;attribute name="ConfigurableDirectory" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> *       &amp;lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> *       &amp;lt;attribute name="Display" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="InstallDefault"&amp;gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> *         &amp;lt;simpleType&amp;gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> *             &amp;lt;enumeration value="followParent"/&amp;gt;<a name="line.73"></a>
+<span class="sourceLineNo">074</span> *             &amp;lt;enumeration value="local"/&amp;gt;<a name="line.74"></a>
+<span class="sourceLineNo">075</span> *             &amp;lt;enumeration value="source"/&amp;gt;<a name="line.75"></a>
+<span class="sourceLineNo">076</span> *           &amp;lt;/restriction&amp;gt;<a name="line.76"></a>
+<span class="sourceLineNo">077</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span> *       &amp;lt;/attribute&amp;gt;<a name="line.78"></a>
+<span class="sourceLineNo">079</span> *       &amp;lt;attribute name="Level" type="{http://www.w3.org/2001/XMLSchema}integer" /&amp;gt;<a name="line.79"></a>
+<span class="sourceLineNo">080</span> *       &amp;lt;attribute name="Title" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.80"></a>
+<span class="sourceLineNo">081</span> *       &amp;lt;attribute name="TypicalDefault"&amp;gt;<a name="line.81"></a>
+<span class="sourceLineNo">082</span> *         &amp;lt;simpleType&amp;gt;<a name="line.82"></a>
+<span class="sourceLineNo">083</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.83"></a>
+<span class="sourceLineNo">084</span> *             &amp;lt;enumeration value="advertise"/&amp;gt;<a name="line.84"></a>
+<span class="sourceLineNo">085</span> *             &amp;lt;enumeration value="install"/&amp;gt;<a name="line.85"></a>
+<span class="sourceLineNo">086</span> *           &amp;lt;/restriction&amp;gt;<a name="line.86"></a>
+<span class="sourceLineNo">087</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.87"></a>
+<span class="sourceLineNo">088</span> *       &amp;lt;/attribute&amp;gt;<a name="line.88"></a>
+<span class="sourceLineNo">089</span> *       &amp;lt;anyAttribute processContents='lax' namespace='##other'/&amp;gt;<a name="line.89"></a>
+<span class="sourceLineNo">090</span> *     &amp;lt;/restriction&amp;gt;<a name="line.90"></a>
+<span class="sourceLineNo">091</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.91"></a>
+<span class="sourceLineNo">092</span> * &amp;lt;/complexType&amp;gt;<a name="line.92"></a>
 <span class="sourceLineNo">093</span> * &lt;/pre&gt;<a name="line.93"></a>
 <span class="sourceLineNo">094</span> * <a name="line.94"></a>
 <span class="sourceLineNo">095</span> * <a name="line.95"></a>
@@ -110,14 +110,14 @@
 <span class="sourceLineNo">102</span>public class Feature {<a name="line.102"></a>
 <span class="sourceLineNo">103</span><a name="line.103"></a>
 <span class="sourceLineNo">104</span>    @XmlElementRefs({<a name="line.104"></a>
-<span class="sourceLineNo">105</span>        @XmlElementRef(name = "Feature", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Feature.class),<a name="line.105"></a>
-<span class="sourceLineNo">106</span>        @XmlElementRef(name = "Component", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Component.class),<a name="line.106"></a>
-<span class="sourceLineNo">107</span>        @XmlElementRef(name = "FeatureGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureGroupRef.class),<a name="line.107"></a>
-<span class="sourceLineNo">108</span>        @XmlElementRef(name = "ComponentRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentRef.class),<a name="line.108"></a>
-<span class="sourceLineNo">109</span>        @XmlElementRef(name = "ComponentGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentGroupRef.class),<a name="line.109"></a>
-<span class="sourceLineNo">110</span>        @XmlElementRef(name = "MergeRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = MergeRef.class),<a name="line.110"></a>
-<span class="sourceLineNo">111</span>        @XmlElementRef(name = "FeatureRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureRef.class),<a name="line.111"></a>
-<span class="sourceLineNo">112</span>        @XmlElementRef(name = "Condition", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Condition.class)<a name="line.112"></a>
+<span class="sourceLineNo">105</span>        @XmlElementRef(name = "FeatureRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureRef.class, required = false),<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        @XmlElementRef(name = "Component", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Component.class, required = false),<a name="line.106"></a>
+<span class="sourceLineNo">107</span>        @XmlElementRef(name = "ComponentRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentRef.class, required = false),<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        @XmlElementRef(name = "MergeRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = MergeRef.class, required = false),<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        @XmlElementRef(name = "ComponentGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentGroupRef.class, required = false),<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        @XmlElementRef(name = "FeatureGroupRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureGroupRef.class, required = false),<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        @XmlElementRef(name = "Feature", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Feature.class, required = false),<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        @XmlElementRef(name = "Condition", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Condition.class, required = false)<a name="line.112"></a>
 <span class="sourceLineNo">113</span>    })<a name="line.113"></a>
 <span class="sourceLineNo">114</span>    @XmlAnyElement(lax = true)<a name="line.114"></a>
 <span class="sourceLineNo">115</span>    protected List&lt;Object&gt; componentOrComponentGroupRefOrComponentRef;<a name="line.115"></a>
@@ -193,16 +193,16 @@
 <span class="sourceLineNo">185</span>     * <a name="line.185"></a>
 <span class="sourceLineNo">186</span>     * &lt;p&gt;<a name="line.186"></a>
 <span class="sourceLineNo">187</span>     * Objects of the following type(s) are allowed in the list<a name="line.187"></a>
-<span class="sourceLineNo">188</span>     * {@link Feature }<a name="line.188"></a>
+<span class="sourceLineNo">188</span>     * {@link FeatureRef }<a name="line.188"></a>
 <span class="sourceLineNo">189</span>     * {@link Component }<a name="line.189"></a>
-<span class="sourceLineNo">190</span>     * {@link FeatureGroupRef }<a name="line.190"></a>
+<span class="sourceLineNo">190</span>     * {@link Element }<a name="line.190"></a>
 <span class="sourceLineNo">191</span>     * {@link ComponentRef }<a name="line.191"></a>
-<span class="sourceLineNo">192</span>     * {@link ComponentGroupRef }<a name="line.192"></a>
-<span class="sourceLineNo">193</span>     * {@link MergeRef }<a name="line.193"></a>
-<span class="sourceLineNo">194</span>     * {@link FeatureRef }<a name="line.194"></a>
-<span class="sourceLineNo">195</span>     * {@link Object }<a name="line.195"></a>
-<span class="sourceLineNo">196</span>     * {@link Element }<a name="line.196"></a>
-<span class="sourceLineNo">197</span>     * {@link Condition }<a name="line.197"></a>
+<span class="sourceLineNo">192</span>     * {@link MergeRef }<a name="line.192"></a>
+<span class="sourceLineNo">193</span>     * {@link ComponentGroupRef }<a name="line.193"></a>
+<span class="sourceLineNo">194</span>     * {@link FeatureGroupRef }<a name="line.194"></a>
+<span class="sourceLineNo">195</span>     * {@link Feature }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>     * {@link Condition }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>     * {@link Object }<a name="line.197"></a>
 <span class="sourceLineNo">198</span>     * <a name="line.198"></a>
 <span class="sourceLineNo">199</span>     * <a name="line.199"></a>
 <span class="sourceLineNo">200</span>     */<a name="line.200"></a>

@@ -33,64 +33,64 @@
 <span class="sourceLineNo">025</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.25"></a>
 <span class="sourceLineNo">026</span> * <a name="line.26"></a>
 <span class="sourceLineNo">027</span> * &lt;pre&gt;<a name="line.27"></a>
-<span class="sourceLineNo">028</span> * &amp;lt;complexType&gt;<a name="line.28"></a>
-<span class="sourceLineNo">029</span> *   &amp;lt;complexContent&gt;<a name="line.29"></a>
-<span class="sourceLineNo">030</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.30"></a>
-<span class="sourceLineNo">031</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AppId"/&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Binary"/&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplication"/&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplicationRef"/&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComplianceCheck"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Component"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentGroup"/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Condition"/&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Container"/&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomAction"/&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomActionRef"/&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomTable"/&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Directory"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DirectoryRef"/&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EmbeddedChainer"/&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EmbeddedChainerRef"/&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EnsureTable"/&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Feature"/&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureGroup"/&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureRef"/&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Icon"/&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}IgnoreModularization"/&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Media"/&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MediaTemplate"/&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PackageGroup"/&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PackageCertificates"/&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchCertificates"/&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamily"/&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyGroup"/&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroup"/&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Property"/&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PropertyRef"/&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RelatedBundle"/&gt;<a name="line.64"></a>
-<span class="sourceLineNo">065</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetDirectory"/&gt;<a name="line.65"></a>
-<span class="sourceLineNo">066</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetProperty"/&gt;<a name="line.66"></a>
-<span class="sourceLineNo">067</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SFPCatalog"/&gt;<a name="line.67"></a>
-<span class="sourceLineNo">068</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UI"/&gt;<a name="line.68"></a>
-<span class="sourceLineNo">069</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UIRef"/&gt;<a name="line.69"></a>
-<span class="sourceLineNo">070</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Upgrade"/&gt;<a name="line.70"></a>
-<span class="sourceLineNo">071</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Variable"/&gt;<a name="line.71"></a>
-<span class="sourceLineNo">072</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WixVariable"/&gt;<a name="line.72"></a>
-<span class="sourceLineNo">073</span> *         &amp;lt;sequence&gt;<a name="line.73"></a>
-<span class="sourceLineNo">074</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecuteSequence" minOccurs="0"/&gt;<a name="line.74"></a>
-<span class="sourceLineNo">075</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallUISequence" minOccurs="0"/&gt;<a name="line.75"></a>
-<span class="sourceLineNo">076</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdminExecuteSequence" minOccurs="0"/&gt;<a name="line.76"></a>
-<span class="sourceLineNo">077</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdminUISequence" minOccurs="0"/&gt;<a name="line.77"></a>
-<span class="sourceLineNo">078</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdvertiseExecuteSequence" minOccurs="0"/&gt;<a name="line.78"></a>
-<span class="sourceLineNo">079</span> *         &amp;lt;/sequence&gt;<a name="line.79"></a>
-<span class="sourceLineNo">080</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.80"></a>
-<span class="sourceLineNo">081</span> *       &amp;lt;/choice&gt;<a name="line.81"></a>
-<span class="sourceLineNo">082</span> *       &amp;lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.82"></a>
-<span class="sourceLineNo">083</span> *     &amp;lt;/restriction&gt;<a name="line.83"></a>
-<span class="sourceLineNo">084</span> *   &amp;lt;/complexContent&gt;<a name="line.84"></a>
-<span class="sourceLineNo">085</span> * &amp;lt;/complexType&gt;<a name="line.85"></a>
+<span class="sourceLineNo">028</span> * &amp;lt;complexType&amp;gt;<a name="line.28"></a>
+<span class="sourceLineNo">029</span> *   &amp;lt;complexContent&amp;gt;<a name="line.29"></a>
+<span class="sourceLineNo">030</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.31"></a>
+<span class="sourceLineNo">032</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AppId"/&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Binary"/&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplication"/&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}BootstrapperApplicationRef"/&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComplianceCheck"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Component"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}ComponentGroup"/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Condition"/&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Container"/&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomAction"/&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomActionRef"/&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}CustomTable"/&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Directory"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}DirectoryRef"/&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EmbeddedChainer"/&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EmbeddedChainerRef"/&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}EnsureTable"/&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Feature"/&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureGroup"/&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}FeatureRef"/&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Icon"/&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}IgnoreModularization"/&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Media"/&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}MediaTemplate"/&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PackageGroup"/&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PackageCertificates"/&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchCertificates"/&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamily"/&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PatchFamilyGroup"/&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PayloadGroup"/&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Property"/&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PropertyRef"/&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RelatedBundle"/&amp;gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetDirectory"/&amp;gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SetProperty"/&amp;gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}SFPCatalog"/&amp;gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UI"/&amp;gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}UIRef"/&amp;gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Upgrade"/&amp;gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Variable"/&amp;gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}WixVariable"/&amp;gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> *         &amp;lt;sequence&amp;gt;<a name="line.73"></a>
+<span class="sourceLineNo">074</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallExecuteSequence" minOccurs="0"/&amp;gt;<a name="line.74"></a>
+<span class="sourceLineNo">075</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}InstallUISequence" minOccurs="0"/&amp;gt;<a name="line.75"></a>
+<span class="sourceLineNo">076</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdminExecuteSequence" minOccurs="0"/&amp;gt;<a name="line.76"></a>
+<span class="sourceLineNo">077</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdminUISequence" minOccurs="0"/&amp;gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span> *           &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}AdvertiseExecuteSequence" minOccurs="0"/&amp;gt;<a name="line.78"></a>
+<span class="sourceLineNo">079</span> *         &amp;lt;/sequence&amp;gt;<a name="line.79"></a>
+<span class="sourceLineNo">080</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.80"></a>
+<span class="sourceLineNo">081</span> *       &amp;lt;/choice&amp;gt;<a name="line.81"></a>
+<span class="sourceLineNo">082</span> *       &amp;lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.82"></a>
+<span class="sourceLineNo">083</span> *     &amp;lt;/restriction&amp;gt;<a name="line.83"></a>
+<span class="sourceLineNo">084</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.84"></a>
+<span class="sourceLineNo">085</span> * &amp;lt;/complexType&amp;gt;<a name="line.85"></a>
 <span class="sourceLineNo">086</span> * &lt;/pre&gt;<a name="line.86"></a>
 <span class="sourceLineNo">087</span> * <a name="line.87"></a>
 <span class="sourceLineNo">088</span> * <a name="line.88"></a>
@@ -103,52 +103,52 @@
 <span class="sourceLineNo">095</span>public class Fragment {<a name="line.95"></a>
 <span class="sourceLineNo">096</span><a name="line.96"></a>
 <span class="sourceLineNo">097</span>    @XmlElementRefs({<a name="line.97"></a>
-<span class="sourceLineNo">098</span>        @XmlElementRef(name = "ComplianceCheck", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComplianceCheck.class),<a name="line.98"></a>
-<span class="sourceLineNo">099</span>        @XmlElementRef(name = "Media", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Media.class),<a name="line.99"></a>
-<span class="sourceLineNo">100</span>        @XmlElementRef(name = "AppId", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AppId.class),<a name="line.100"></a>
-<span class="sourceLineNo">101</span>        @XmlElementRef(name = "ComponentGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentGroup.class),<a name="line.101"></a>
-<span class="sourceLineNo">102</span>        @XmlElementRef(name = "AdminUISequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdminUISequence.class),<a name="line.102"></a>
-<span class="sourceLineNo">103</span>        @XmlElementRef(name = "EnsureTable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EnsureTable.class),<a name="line.103"></a>
-<span class="sourceLineNo">104</span>        @XmlElementRef(name = "PatchFamily", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamily.class),<a name="line.104"></a>
-<span class="sourceLineNo">105</span>        @XmlElementRef(name = "UIRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = UIRef.class),<a name="line.105"></a>
-<span class="sourceLineNo">106</span>        @XmlElementRef(name = "Container", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Container.class),<a name="line.106"></a>
-<span class="sourceLineNo">107</span>        @XmlElementRef(name = "InstallExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = InstallExecuteSequence.class),<a name="line.107"></a>
-<span class="sourceLineNo">108</span>        @XmlElementRef(name = "WixVariable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = WixVariable.class),<a name="line.108"></a>
-<span class="sourceLineNo">109</span>        @XmlElementRef(name = "Variable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Variable.class),<a name="line.109"></a>
-<span class="sourceLineNo">110</span>        @XmlElementRef(name = "BootstrapperApplicationRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplicationRef.class),<a name="line.110"></a>
-<span class="sourceLineNo">111</span>        @XmlElementRef(name = "BootstrapperApplication", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplication.class),<a name="line.111"></a>
-<span class="sourceLineNo">112</span>        @XmlElementRef(name = "DirectoryRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = DirectoryRef.class),<a name="line.112"></a>
-<span class="sourceLineNo">113</span>        @XmlElementRef(name = "Binary", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Binary.class),<a name="line.113"></a>
-<span class="sourceLineNo">114</span>        @XmlElementRef(name = "Directory", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Directory.class),<a name="line.114"></a>
-<span class="sourceLineNo">115</span>        @XmlElementRef(name = "PackageCertificates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PackageCertificates.class),<a name="line.115"></a>
-<span class="sourceLineNo">116</span>        @XmlElementRef(name = "EmbeddedChainer", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EmbeddedChainer.class),<a name="line.116"></a>
-<span class="sourceLineNo">117</span>        @XmlElementRef(name = "RelatedBundle", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RelatedBundle.class),<a name="line.117"></a>
-<span class="sourceLineNo">118</span>        @XmlElementRef(name = "SetDirectory", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SetDirectory.class),<a name="line.118"></a>
-<span class="sourceLineNo">119</span>        @XmlElementRef(name = "PackageGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PackageGroup.class),<a name="line.119"></a>
-<span class="sourceLineNo">120</span>        @XmlElementRef(name = "PatchFamilyGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyGroup.class),<a name="line.120"></a>
-<span class="sourceLineNo">121</span>        @XmlElementRef(name = "AdvertiseExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdvertiseExecuteSequence.class),<a name="line.121"></a>
-<span class="sourceLineNo">122</span>        @XmlElementRef(name = "Condition", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Condition.class),<a name="line.122"></a>
-<span class="sourceLineNo">123</span>        @XmlElementRef(name = "Feature", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Feature.class),<a name="line.123"></a>
-<span class="sourceLineNo">124</span>        @XmlElementRef(name = "EmbeddedChainerRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EmbeddedChainerRef.class),<a name="line.124"></a>
-<span class="sourceLineNo">125</span>        @XmlElementRef(name = "Component", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Component.class),<a name="line.125"></a>
-<span class="sourceLineNo">126</span>        @XmlElementRef(name = "CustomTable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomTable.class),<a name="line.126"></a>
-<span class="sourceLineNo">127</span>        @XmlElementRef(name = "Property", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Property.class),<a name="line.127"></a>
-<span class="sourceLineNo">128</span>        @XmlElementRef(name = "SetProperty", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SetProperty.class),<a name="line.128"></a>
-<span class="sourceLineNo">129</span>        @XmlElementRef(name = "PropertyRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PropertyRef.class),<a name="line.129"></a>
-<span class="sourceLineNo">130</span>        @XmlElementRef(name = "Upgrade", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Upgrade.class),<a name="line.130"></a>
-<span class="sourceLineNo">131</span>        @XmlElementRef(name = "UI", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = UI.class),<a name="line.131"></a>
-<span class="sourceLineNo">132</span>        @XmlElementRef(name = "IgnoreModularization", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = IgnoreModularization.class),<a name="line.132"></a>
-<span class="sourceLineNo">133</span>        @XmlElementRef(name = "Icon", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Icon.class),<a name="line.133"></a>
-<span class="sourceLineNo">134</span>        @XmlElementRef(name = "FeatureRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureRef.class),<a name="line.134"></a>
-<span class="sourceLineNo">135</span>        @XmlElementRef(name = "CustomActionRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomActionRef.class),<a name="line.135"></a>
-<span class="sourceLineNo">136</span>        @XmlElementRef(name = "AdminExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdminExecuteSequence.class),<a name="line.136"></a>
-<span class="sourceLineNo">137</span>        @XmlElementRef(name = "PatchCertificates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchCertificates.class),<a name="line.137"></a>
-<span class="sourceLineNo">138</span>        @XmlElementRef(name = "CustomAction", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomAction.class),<a name="line.138"></a>
-<span class="sourceLineNo">139</span>        @XmlElementRef(name = "PayloadGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroup.class),<a name="line.139"></a>
-<span class="sourceLineNo">140</span>        @XmlElementRef(name = "InstallUISequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = InstallUISequence.class),<a name="line.140"></a>
-<span class="sourceLineNo">141</span>        @XmlElementRef(name = "MediaTemplate", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = MediaTemplate.class),<a name="line.141"></a>
-<span class="sourceLineNo">142</span>        @XmlElementRef(name = "SFPCatalog", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SFPCatalog.class),<a name="line.142"></a>
-<span class="sourceLineNo">143</span>        @XmlElementRef(name = "FeatureGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureGroup.class)<a name="line.143"></a>
+<span class="sourceLineNo">098</span>        @XmlElementRef(name = "DirectoryRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = DirectoryRef.class, required = false),<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        @XmlElementRef(name = "AdminExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdminExecuteSequence.class, required = false),<a name="line.99"></a>
+<span class="sourceLineNo">100</span>        @XmlElementRef(name = "EmbeddedChainer", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EmbeddedChainer.class, required = false),<a name="line.100"></a>
+<span class="sourceLineNo">101</span>        @XmlElementRef(name = "CustomTable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomTable.class, required = false),<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        @XmlElementRef(name = "PatchCertificates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchCertificates.class, required = false),<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        @XmlElementRef(name = "Property", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Property.class, required = false),<a name="line.103"></a>
+<span class="sourceLineNo">104</span>        @XmlElementRef(name = "PackageCertificates", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PackageCertificates.class, required = false),<a name="line.104"></a>
+<span class="sourceLineNo">105</span>        @XmlElementRef(name = "PayloadGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PayloadGroup.class, required = false),<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        @XmlElementRef(name = "Container", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Container.class, required = false),<a name="line.106"></a>
+<span class="sourceLineNo">107</span>        @XmlElementRef(name = "RelatedBundle", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RelatedBundle.class, required = false),<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        @XmlElementRef(name = "FeatureGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureGroup.class, required = false),<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        @XmlElementRef(name = "PropertyRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PropertyRef.class, required = false),<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        @XmlElementRef(name = "EmbeddedChainerRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EmbeddedChainerRef.class, required = false),<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        @XmlElementRef(name = "IgnoreModularization", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = IgnoreModularization.class, required = false),<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        @XmlElementRef(name = "SFPCatalog", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SFPCatalog.class, required = false),<a name="line.112"></a>
+<span class="sourceLineNo">113</span>        @XmlElementRef(name = "AppId", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AppId.class, required = false),<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        @XmlElementRef(name = "PackageGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PackageGroup.class, required = false),<a name="line.114"></a>
+<span class="sourceLineNo">115</span>        @XmlElementRef(name = "Media", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Media.class, required = false),<a name="line.115"></a>
+<span class="sourceLineNo">116</span>        @XmlElementRef(name = "BootstrapperApplicationRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplicationRef.class, required = false),<a name="line.116"></a>
+<span class="sourceLineNo">117</span>        @XmlElementRef(name = "AdminUISequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdminUISequence.class, required = false),<a name="line.117"></a>
+<span class="sourceLineNo">118</span>        @XmlElementRef(name = "ComponentGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComponentGroup.class, required = false),<a name="line.118"></a>
+<span class="sourceLineNo">119</span>        @XmlElementRef(name = "CustomActionRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomActionRef.class, required = false),<a name="line.119"></a>
+<span class="sourceLineNo">120</span>        @XmlElementRef(name = "BootstrapperApplication", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = BootstrapperApplication.class, required = false),<a name="line.120"></a>
+<span class="sourceLineNo">121</span>        @XmlElementRef(name = "CustomAction", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = CustomAction.class, required = false),<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        @XmlElementRef(name = "FeatureRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = FeatureRef.class, required = false),<a name="line.122"></a>
+<span class="sourceLineNo">123</span>        @XmlElementRef(name = "WixVariable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = WixVariable.class, required = false),<a name="line.123"></a>
+<span class="sourceLineNo">124</span>        @XmlElementRef(name = "PatchFamily", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamily.class, required = false),<a name="line.124"></a>
+<span class="sourceLineNo">125</span>        @XmlElementRef(name = "Icon", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Icon.class, required = false),<a name="line.125"></a>
+<span class="sourceLineNo">126</span>        @XmlElementRef(name = "SetProperty", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SetProperty.class, required = false),<a name="line.126"></a>
+<span class="sourceLineNo">127</span>        @XmlElementRef(name = "AdvertiseExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = AdvertiseExecuteSequence.class, required = false),<a name="line.127"></a>
+<span class="sourceLineNo">128</span>        @XmlElementRef(name = "Feature", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Feature.class, required = false),<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        @XmlElementRef(name = "Condition", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Condition.class, required = false),<a name="line.129"></a>
+<span class="sourceLineNo">130</span>        @XmlElementRef(name = "PatchFamilyGroup", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PatchFamilyGroup.class, required = false),<a name="line.130"></a>
+<span class="sourceLineNo">131</span>        @XmlElementRef(name = "SetDirectory", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = SetDirectory.class, required = false),<a name="line.131"></a>
+<span class="sourceLineNo">132</span>        @XmlElementRef(name = "Variable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Variable.class, required = false),<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        @XmlElementRef(name = "Component", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Component.class, required = false),<a name="line.133"></a>
+<span class="sourceLineNo">134</span>        @XmlElementRef(name = "InstallExecuteSequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = InstallExecuteSequence.class, required = false),<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        @XmlElementRef(name = "Binary", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Binary.class, required = false),<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        @XmlElementRef(name = "Upgrade", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Upgrade.class, required = false),<a name="line.136"></a>
+<span class="sourceLineNo">137</span>        @XmlElementRef(name = "InstallUISequence", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = InstallUISequence.class, required = false),<a name="line.137"></a>
+<span class="sourceLineNo">138</span>        @XmlElementRef(name = "Directory", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Directory.class, required = false),<a name="line.138"></a>
+<span class="sourceLineNo">139</span>        @XmlElementRef(name = "UI", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = UI.class, required = false),<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        @XmlElementRef(name = "ComplianceCheck", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = ComplianceCheck.class, required = false),<a name="line.140"></a>
+<span class="sourceLineNo">141</span>        @XmlElementRef(name = "EnsureTable", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = EnsureTable.class, required = false),<a name="line.141"></a>
+<span class="sourceLineNo">142</span>        @XmlElementRef(name = "MediaTemplate", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = MediaTemplate.class, required = false),<a name="line.142"></a>
+<span class="sourceLineNo">143</span>        @XmlElementRef(name = "UIRef", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = UIRef.class, required = false)<a name="line.143"></a>
 <span class="sourceLineNo">144</span>    })<a name="line.144"></a>
 <span class="sourceLineNo">145</span>    @XmlAnyElement(lax = true)<a name="line.145"></a>
 <span class="sourceLineNo">146</span>    protected List&lt;Object&gt; appIdOrBinaryOrBootstrapperApplication;<a name="line.146"></a>
@@ -190,54 +190,54 @@
 <span class="sourceLineNo">182</span>     * <a name="line.182"></a>
 <span class="sourceLineNo">183</span>     * &lt;p&gt;<a name="line.183"></a>
 <span class="sourceLineNo">184</span>     * Objects of the following type(s) are allowed in the list<a name="line.184"></a>
-<span class="sourceLineNo">185</span>     * {@link Media }<a name="line.185"></a>
-<span class="sourceLineNo">186</span>     * {@link ComplianceCheck }<a name="line.186"></a>
-<span class="sourceLineNo">187</span>     * {@link AppId }<a name="line.187"></a>
-<span class="sourceLineNo">188</span>     * {@link AdminUISequence }<a name="line.188"></a>
-<span class="sourceLineNo">189</span>     * {@link ComponentGroup }<a name="line.189"></a>
-<span class="sourceLineNo">190</span>     * {@link EnsureTable }<a name="line.190"></a>
-<span class="sourceLineNo">191</span>     * {@link PatchFamily }<a name="line.191"></a>
-<span class="sourceLineNo">192</span>     * {@link Container }<a name="line.192"></a>
-<span class="sourceLineNo">193</span>     * {@link UIRef }<a name="line.193"></a>
-<span class="sourceLineNo">194</span>     * {@link InstallExecuteSequence }<a name="line.194"></a>
-<span class="sourceLineNo">195</span>     * {@link WixVariable }<a name="line.195"></a>
-<span class="sourceLineNo">196</span>     * {@link Object }<a name="line.196"></a>
-<span class="sourceLineNo">197</span>     * {@link Variable }<a name="line.197"></a>
-<span class="sourceLineNo">198</span>     * {@link BootstrapperApplicationRef }<a name="line.198"></a>
-<span class="sourceLineNo">199</span>     * {@link DirectoryRef }<a name="line.199"></a>
-<span class="sourceLineNo">200</span>     * {@link BootstrapperApplication }<a name="line.200"></a>
-<span class="sourceLineNo">201</span>     * {@link Binary }<a name="line.201"></a>
-<span class="sourceLineNo">202</span>     * {@link Directory }<a name="line.202"></a>
-<span class="sourceLineNo">203</span>     * {@link EmbeddedChainer }<a name="line.203"></a>
-<span class="sourceLineNo">204</span>     * {@link PackageCertificates }<a name="line.204"></a>
-<span class="sourceLineNo">205</span>     * {@link RelatedBundle }<a name="line.205"></a>
-<span class="sourceLineNo">206</span>     * {@link SetDirectory }<a name="line.206"></a>
-<span class="sourceLineNo">207</span>     * {@link PackageGroup }<a name="line.207"></a>
-<span class="sourceLineNo">208</span>     * {@link AdvertiseExecuteSequence }<a name="line.208"></a>
-<span class="sourceLineNo">209</span>     * {@link PatchFamilyGroup }<a name="line.209"></a>
-<span class="sourceLineNo">210</span>     * {@link Element }<a name="line.210"></a>
-<span class="sourceLineNo">211</span>     * {@link Condition }<a name="line.211"></a>
-<span class="sourceLineNo">212</span>     * {@link Feature }<a name="line.212"></a>
-<span class="sourceLineNo">213</span>     * {@link EmbeddedChainerRef }<a name="line.213"></a>
-<span class="sourceLineNo">214</span>     * {@link CustomTable }<a name="line.214"></a>
-<span class="sourceLineNo">215</span>     * {@link Component }<a name="line.215"></a>
-<span class="sourceLineNo">216</span>     * {@link Property }<a name="line.216"></a>
-<span class="sourceLineNo">217</span>     * {@link PropertyRef }<a name="line.217"></a>
-<span class="sourceLineNo">218</span>     * {@link SetProperty }<a name="line.218"></a>
-<span class="sourceLineNo">219</span>     * {@link Upgrade }<a name="line.219"></a>
-<span class="sourceLineNo">220</span>     * {@link UI }<a name="line.220"></a>
-<span class="sourceLineNo">221</span>     * {@link IgnoreModularization }<a name="line.221"></a>
-<span class="sourceLineNo">222</span>     * {@link FeatureRef }<a name="line.222"></a>
-<span class="sourceLineNo">223</span>     * {@link Icon }<a name="line.223"></a>
-<span class="sourceLineNo">224</span>     * {@link CustomActionRef }<a name="line.224"></a>
-<span class="sourceLineNo">225</span>     * {@link PatchCertificates }<a name="line.225"></a>
-<span class="sourceLineNo">226</span>     * {@link AdminExecuteSequence }<a name="line.226"></a>
-<span class="sourceLineNo">227</span>     * {@link CustomAction }<a name="line.227"></a>
-<span class="sourceLineNo">228</span>     * {@link PayloadGroup }<a name="line.228"></a>
-<span class="sourceLineNo">229</span>     * {@link InstallUISequence }<a name="line.229"></a>
-<span class="sourceLineNo">230</span>     * {@link SFPCatalog }<a name="line.230"></a>
-<span class="sourceLineNo">231</span>     * {@link MediaTemplate }<a name="line.231"></a>
-<span class="sourceLineNo">232</span>     * {@link FeatureGroup }<a name="line.232"></a>
+<span class="sourceLineNo">185</span>     * {@link DirectoryRef }<a name="line.185"></a>
+<span class="sourceLineNo">186</span>     * {@link AdminExecuteSequence }<a name="line.186"></a>
+<span class="sourceLineNo">187</span>     * {@link EmbeddedChainer }<a name="line.187"></a>
+<span class="sourceLineNo">188</span>     * {@link CustomTable }<a name="line.188"></a>
+<span class="sourceLineNo">189</span>     * {@link PatchCertificates }<a name="line.189"></a>
+<span class="sourceLineNo">190</span>     * {@link Property }<a name="line.190"></a>
+<span class="sourceLineNo">191</span>     * {@link PackageCertificates }<a name="line.191"></a>
+<span class="sourceLineNo">192</span>     * {@link PayloadGroup }<a name="line.192"></a>
+<span class="sourceLineNo">193</span>     * {@link Container }<a name="line.193"></a>
+<span class="sourceLineNo">194</span>     * {@link RelatedBundle }<a name="line.194"></a>
+<span class="sourceLineNo">195</span>     * {@link FeatureGroup }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>     * {@link PropertyRef }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>     * {@link EmbeddedChainerRef }<a name="line.197"></a>
+<span class="sourceLineNo">198</span>     * {@link IgnoreModularization }<a name="line.198"></a>
+<span class="sourceLineNo">199</span>     * {@link SFPCatalog }<a name="line.199"></a>
+<span class="sourceLineNo">200</span>     * {@link AppId }<a name="line.200"></a>
+<span class="sourceLineNo">201</span>     * {@link PackageGroup }<a name="line.201"></a>
+<span class="sourceLineNo">202</span>     * {@link Media }<a name="line.202"></a>
+<span class="sourceLineNo">203</span>     * {@link BootstrapperApplicationRef }<a name="line.203"></a>
+<span class="sourceLineNo">204</span>     * {@link AdminUISequence }<a name="line.204"></a>
+<span class="sourceLineNo">205</span>     * {@link ComponentGroup }<a name="line.205"></a>
+<span class="sourceLineNo">206</span>     * {@link CustomActionRef }<a name="line.206"></a>
+<span class="sourceLineNo">207</span>     * {@link BootstrapperApplication }<a name="line.207"></a>
+<span class="sourceLineNo">208</span>     * {@link CustomAction }<a name="line.208"></a>
+<span class="sourceLineNo">209</span>     * {@link FeatureRef }<a name="line.209"></a>
+<span class="sourceLineNo">210</span>     * {@link WixVariable }<a name="line.210"></a>
+<span class="sourceLineNo">211</span>     * {@link Element }<a name="line.211"></a>
+<span class="sourceLineNo">212</span>     * {@link PatchFamily }<a name="line.212"></a>
+<span class="sourceLineNo">213</span>     * {@link Icon }<a name="line.213"></a>
+<span class="sourceLineNo">214</span>     * {@link SetProperty }<a name="line.214"></a>
+<span class="sourceLineNo">215</span>     * {@link AdvertiseExecuteSequence }<a name="line.215"></a>
+<span class="sourceLineNo">216</span>     * {@link Feature }<a name="line.216"></a>
+<span class="sourceLineNo">217</span>     * {@link Condition }<a name="line.217"></a>
+<span class="sourceLineNo">218</span>     * {@link PatchFamilyGroup }<a name="line.218"></a>
+<span class="sourceLineNo">219</span>     * {@link SetDirectory }<a name="line.219"></a>
+<span class="sourceLineNo">220</span>     * {@link Variable }<a name="line.220"></a>
+<span class="sourceLineNo">221</span>     * {@link Component }<a name="line.221"></a>
+<span class="sourceLineNo">222</span>     * {@link InstallExecuteSequence }<a name="line.222"></a>
+<span class="sourceLineNo">223</span>     * {@link Binary }<a name="line.223"></a>
+<span class="sourceLineNo">224</span>     * {@link Upgrade }<a name="line.224"></a>
+<span class="sourceLineNo">225</span>     * {@link InstallUISequence }<a name="line.225"></a>
+<span class="sourceLineNo">226</span>     * {@link Directory }<a name="line.226"></a>
+<span class="sourceLineNo">227</span>     * {@link UI }<a name="line.227"></a>
+<span class="sourceLineNo">228</span>     * {@link ComplianceCheck }<a name="line.228"></a>
+<span class="sourceLineNo">229</span>     * {@link EnsureTable }<a name="line.229"></a>
+<span class="sourceLineNo">230</span>     * {@link MediaTemplate }<a name="line.230"></a>
+<span class="sourceLineNo">231</span>     * {@link Object }<a name="line.231"></a>
+<span class="sourceLineNo">232</span>     * {@link UIRef }<a name="line.232"></a>
 <span class="sourceLineNo">233</span>     * <a name="line.233"></a>
 <span class="sourceLineNo">234</span>     * <a name="line.234"></a>
 <span class="sourceLineNo">235</span>     */<a name="line.235"></a>

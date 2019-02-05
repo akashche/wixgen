@@ -35,50 +35,50 @@
 <span class="sourceLineNo">027</span> * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.<a name="line.27"></a>
 <span class="sourceLineNo">028</span> * <a name="line.28"></a>
 <span class="sourceLineNo">029</span> * &lt;pre&gt;<a name="line.29"></a>
-<span class="sourceLineNo">030</span> * &amp;lt;complexType&gt;<a name="line.30"></a>
-<span class="sourceLineNo">031</span> *   &amp;lt;complexContent&gt;<a name="line.31"></a>
-<span class="sourceLineNo">032</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;<a name="line.32"></a>
-<span class="sourceLineNo">033</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&gt;<a name="line.33"></a>
-<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Permission"/&gt;<a name="line.34"></a>
-<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PermissionEx"/&gt;<a name="line.35"></a>
-<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegistryValue"/&gt;<a name="line.36"></a>
-<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Registry"/&gt;<a name="line.37"></a>
-<span class="sourceLineNo">038</span> *         &amp;lt;any processContents='lax' namespace='##other'/&gt;<a name="line.38"></a>
-<span class="sourceLineNo">039</span> *       &amp;lt;/choice&gt;<a name="line.39"></a>
-<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.40"></a>
-<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Action"&gt;<a name="line.41"></a>
-<span class="sourceLineNo">042</span> *         &amp;lt;simpleType&gt;<a name="line.42"></a>
-<span class="sourceLineNo">043</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.43"></a>
-<span class="sourceLineNo">044</span> *             &amp;lt;enumeration value="append"/&gt;<a name="line.44"></a>
-<span class="sourceLineNo">045</span> *             &amp;lt;enumeration value="createKey"/&gt;<a name="line.45"></a>
-<span class="sourceLineNo">046</span> *             &amp;lt;enumeration value="createKeyAndRemoveKeyOnUninstall"/&gt;<a name="line.46"></a>
-<span class="sourceLineNo">047</span> *             &amp;lt;enumeration value="prepend"/&gt;<a name="line.47"></a>
-<span class="sourceLineNo">048</span> *             &amp;lt;enumeration value="remove"/&gt;<a name="line.48"></a>
-<span class="sourceLineNo">049</span> *             &amp;lt;enumeration value="removeKeyOnInstall"/&gt;<a name="line.49"></a>
-<span class="sourceLineNo">050</span> *             &amp;lt;enumeration value="removeKeyOnUninstall"/&gt;<a name="line.50"></a>
-<span class="sourceLineNo">051</span> *             &amp;lt;enumeration value="write"/&gt;<a name="line.51"></a>
-<span class="sourceLineNo">052</span> *           &amp;lt;/restriction&gt;<a name="line.52"></a>
-<span class="sourceLineNo">053</span> *         &amp;lt;/simpleType&gt;<a name="line.53"></a>
-<span class="sourceLineNo">054</span> *       &amp;lt;/attribute&gt;<a name="line.54"></a>
-<span class="sourceLineNo">055</span> *       &amp;lt;attribute name="Key" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.55"></a>
-<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="KeyPath" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&gt;<a name="line.56"></a>
-<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.57"></a>
-<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="Root" type="{http://schemas.microsoft.com/wix/2006/wi}RegistryRootType" /&gt;<a name="line.58"></a>
-<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="Type"&gt;<a name="line.59"></a>
-<span class="sourceLineNo">060</span> *         &amp;lt;simpleType&gt;<a name="line.60"></a>
-<span class="sourceLineNo">061</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;<a name="line.61"></a>
-<span class="sourceLineNo">062</span> *             &amp;lt;enumeration value="string"/&gt;<a name="line.62"></a>
-<span class="sourceLineNo">063</span> *             &amp;lt;enumeration value="integer"/&gt;<a name="line.63"></a>
-<span class="sourceLineNo">064</span> *             &amp;lt;enumeration value="binary"/&gt;<a name="line.64"></a>
-<span class="sourceLineNo">065</span> *             &amp;lt;enumeration value="expandable"/&gt;<a name="line.65"></a>
-<span class="sourceLineNo">066</span> *             &amp;lt;enumeration value="multiString"/&gt;<a name="line.66"></a>
-<span class="sourceLineNo">067</span> *           &amp;lt;/restriction&gt;<a name="line.67"></a>
-<span class="sourceLineNo">068</span> *         &amp;lt;/simpleType&gt;<a name="line.68"></a>
-<span class="sourceLineNo">069</span> *       &amp;lt;/attribute&gt;<a name="line.69"></a>
-<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="Value" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;<a name="line.70"></a>
-<span class="sourceLineNo">071</span> *     &amp;lt;/restriction&gt;<a name="line.71"></a>
-<span class="sourceLineNo">072</span> *   &amp;lt;/complexContent&gt;<a name="line.72"></a>
-<span class="sourceLineNo">073</span> * &amp;lt;/complexType&gt;<a name="line.73"></a>
+<span class="sourceLineNo">030</span> * &amp;lt;complexType&amp;gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> *   &amp;lt;complexContent&amp;gt;<a name="line.31"></a>
+<span class="sourceLineNo">032</span> *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> *       &amp;lt;choice maxOccurs="unbounded" minOccurs="0"&amp;gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Permission"/&amp;gt;<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}PermissionEx"/&amp;gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}RegistryValue"/&amp;gt;<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *         &amp;lt;element ref="{http://schemas.microsoft.com/wix/2006/wi}Registry"/&amp;gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span> *         &amp;lt;any processContents='lax' namespace='##other'/&amp;gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *       &amp;lt;/choice&amp;gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *       &amp;lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *       &amp;lt;attribute name="Action"&amp;gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *         &amp;lt;simpleType&amp;gt;<a name="line.42"></a>
+<span class="sourceLineNo">043</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span> *             &amp;lt;enumeration value="append"/&amp;gt;<a name="line.44"></a>
+<span class="sourceLineNo">045</span> *             &amp;lt;enumeration value="createKey"/&amp;gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> *             &amp;lt;enumeration value="createKeyAndRemoveKeyOnUninstall"/&amp;gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span> *             &amp;lt;enumeration value="prepend"/&amp;gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> *             &amp;lt;enumeration value="remove"/&amp;gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span> *             &amp;lt;enumeration value="removeKeyOnInstall"/&amp;gt;<a name="line.49"></a>
+<span class="sourceLineNo">050</span> *             &amp;lt;enumeration value="removeKeyOnUninstall"/&amp;gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *             &amp;lt;enumeration value="write"/&amp;gt;<a name="line.51"></a>
+<span class="sourceLineNo">052</span> *           &amp;lt;/restriction&amp;gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> *       &amp;lt;/attribute&amp;gt;<a name="line.54"></a>
+<span class="sourceLineNo">055</span> *       &amp;lt;attribute name="Key" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.55"></a>
+<span class="sourceLineNo">056</span> *       &amp;lt;attribute name="KeyPath" type="{http://schemas.microsoft.com/wix/2006/wi}YesNoTypeUnion" /&amp;gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> *       &amp;lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> *       &amp;lt;attribute name="Root" type="{http://schemas.microsoft.com/wix/2006/wi}RegistryRootType" /&amp;gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> *       &amp;lt;attribute name="Type"&amp;gt;<a name="line.59"></a>
+<span class="sourceLineNo">060</span> *         &amp;lt;simpleType&amp;gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> *           &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&amp;gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span> *             &amp;lt;enumeration value="string"/&amp;gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> *             &amp;lt;enumeration value="integer"/&amp;gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> *             &amp;lt;enumeration value="binary"/&amp;gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> *             &amp;lt;enumeration value="expandable"/&amp;gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span> *             &amp;lt;enumeration value="multiString"/&amp;gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> *           &amp;lt;/restriction&amp;gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> *         &amp;lt;/simpleType&amp;gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> *       &amp;lt;/attribute&amp;gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span> *       &amp;lt;attribute name="Value" type="{http://www.w3.org/2001/XMLSchema}string" /&amp;gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> *     &amp;lt;/restriction&amp;gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> *   &amp;lt;/complexContent&amp;gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> * &amp;lt;/complexType&amp;gt;<a name="line.73"></a>
 <span class="sourceLineNo">074</span> * &lt;/pre&gt;<a name="line.74"></a>
 <span class="sourceLineNo">075</span> * <a name="line.75"></a>
 <span class="sourceLineNo">076</span> * <a name="line.76"></a>
@@ -91,10 +91,10 @@
 <span class="sourceLineNo">083</span>public class Registry {<a name="line.83"></a>
 <span class="sourceLineNo">084</span><a name="line.84"></a>
 <span class="sourceLineNo">085</span>    @XmlElementRefs({<a name="line.85"></a>
-<span class="sourceLineNo">086</span>        @XmlElementRef(name = "RegistryValue", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RegistryValue.class),<a name="line.86"></a>
-<span class="sourceLineNo">087</span>        @XmlElementRef(name = "Permission", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Permission.class),<a name="line.87"></a>
-<span class="sourceLineNo">088</span>        @XmlElementRef(name = "Registry", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Registry.class),<a name="line.88"></a>
-<span class="sourceLineNo">089</span>        @XmlElementRef(name = "PermissionEx", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PermissionEx.class)<a name="line.89"></a>
+<span class="sourceLineNo">086</span>        @XmlElementRef(name = "Permission", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Permission.class, required = false),<a name="line.86"></a>
+<span class="sourceLineNo">087</span>        @XmlElementRef(name = "PermissionEx", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = PermissionEx.class, required = false),<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        @XmlElementRef(name = "RegistryValue", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = RegistryValue.class, required = false),<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        @XmlElementRef(name = "Registry", namespace = "http://schemas.microsoft.com/wix/2006/wi", type = Registry.class, required = false)<a name="line.89"></a>
 <span class="sourceLineNo">090</span>    })<a name="line.90"></a>
 <span class="sourceLineNo">091</span>    @XmlAnyElement(lax = true)<a name="line.91"></a>
 <span class="sourceLineNo">092</span>    protected List&lt;Object&gt; permissionOrPermissionExOrRegistryValue;<a name="line.92"></a>
@@ -159,12 +159,12 @@
 <span class="sourceLineNo">151</span>     * <a name="line.151"></a>
 <span class="sourceLineNo">152</span>     * &lt;p&gt;<a name="line.152"></a>
 <span class="sourceLineNo">153</span>     * Objects of the following type(s) are allowed in the list<a name="line.153"></a>
-<span class="sourceLineNo">154</span>     * {@link RegistryValue }<a name="line.154"></a>
-<span class="sourceLineNo">155</span>     * {@link Permission }<a name="line.155"></a>
-<span class="sourceLineNo">156</span>     * {@link Registry }<a name="line.156"></a>
-<span class="sourceLineNo">157</span>     * {@link Object }<a name="line.157"></a>
+<span class="sourceLineNo">154</span>     * {@link Permission }<a name="line.154"></a>
+<span class="sourceLineNo">155</span>     * {@link PermissionEx }<a name="line.155"></a>
+<span class="sourceLineNo">156</span>     * {@link RegistryValue }<a name="line.156"></a>
+<span class="sourceLineNo">157</span>     * {@link Registry }<a name="line.157"></a>
 <span class="sourceLineNo">158</span>     * {@link Element }<a name="line.158"></a>
-<span class="sourceLineNo">159</span>     * {@link PermissionEx }<a name="line.159"></a>
+<span class="sourceLineNo">159</span>     * {@link Object }<a name="line.159"></a>
 <span class="sourceLineNo">160</span>     * <a name="line.160"></a>
 <span class="sourceLineNo">161</span>     * <a name="line.161"></a>
 <span class="sourceLineNo">162</span>     */<a name="line.162"></a>
